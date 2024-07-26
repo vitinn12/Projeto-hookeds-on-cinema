@@ -11,3 +11,4 @@ urlpatterns = [
     path ('user/', views.user, name= 'areadousuario'),    
 
 ]
+ 

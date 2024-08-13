@@ -16,16 +16,28 @@
     <div class="form register-form">
         <h2>Registrar <i class="fas fa-user-plus"></i></h2>
         <div class="input-group">
-            <label for="register-email"><i class="fas fa-envelope"></i><input type="email" id="register-email" placeholder="Digite seu Email"></label>
+            <label for="register-email">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="register-email" placeholder="Digite seu Email" name="email">
+            </label>
         </div>
         <div class="input-group">
-            <label for="register-password"><i class="fas fa-lock"></i> <input type="password" id="register-password" placeholder="Escolha uma senha"></label>
+            <label for="register-password">
+                <i class="fas fa-lock"></i> 
+                <input type="password" id="register-password" placeholder="Escolha uma senha"  name="senha">
+            </label>
         </div>
         <div class="input-group">
-            <label for="confirm-password"><i class="fas fa-lock"></i> <input type="password" id="confirm-password" placeholder="Confirme sua senha"></label>
+            <label for="confirm-password"><i class="fas fa-lock"></i> 
+                <input type="password" id="confirm-password" placeholder="Confirme sua senha" name= "confirmar_senha">
+            </label>
         </div>
-        <a href="/login/index.html"><button class="register-btn">Registrar <i class="fas fa-user-plus"></i></button></a>
-        <a href="/index.html"><button class="back-btn">Voltar para o Início <i class="fas fa-home"></i></button></a>
+        <a href="/login/index.html">
+            <input type="submit" class="btn btn-indigo" value="Cadastrar">
+        </a>
+        <a href="/index.html">
+            <button class="back-btn">Voltar para o Início <i class="fas fa-home"></i></button>
+        </a>
         <p>Já tem uma conta? <a href="index.html" class="login-link">Login <i class="fas fa-sign-in-alt"></i></a></p>
     </div>
 </div>

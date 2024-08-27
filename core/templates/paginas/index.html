@@ -15,8 +15,9 @@
     <div class="container">
         <nav>
             <div class="logo">
-                <img src="/fotos/logo.png" alt="Logo">
-                <h1><span>H</span>
+                <img src="{% static 'media/icons/logo.png' %}">
+                <h1>
+                    <span>H</span>
                     <span>o</span>
                     <span>o</span>
                     <span>k</span>
@@ -39,7 +40,7 @@
                     <div class="menuzinho">
                         <a href="/Página em Andamento/index.html"><i class="fas fa-th-list"></i> Categorias</a>
                         <div class="submenu">
-                            
+
                             <ul>
                                 <li><i class="fas fa-film"></i><a href=""> Animação</a></li>
                                 <hr>
@@ -65,33 +66,33 @@
             <div class="search-perfil">
                 <input type="search" href="/Página em Andamento/index.html" placeholder="Search..."><a
                     href="Página em Andamento/index.html"><i class="fas fa-search"></i></a>
-                    
-                        <div class="menuzinho2">
-                            <img src="/fotos/fotoperfil.jpeg" alt="Foto de Perfil" class="fotoperfil">
-                            <div class="submenu2">
-                                <ul>
-                                    <li><a href="/areadousuario/index2.html"> Perfil</a></li>
-                                    <hr>
-                                    <li><a href="/index.html"> Sair</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
+                <div class="menuzinho2">
+                    <img src="{% static 'media/icons/fotoperfil.jpeg' %}" alt="Foto de Perfil" class="fotoperfil">
+                    <div class="submenu2">
+                        <ul>
+                            <li><a href="/areadousuario/index2.html"> Perfil</a></li>
+                            <hr>
+                            <li><a href="/index.html"> Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
 
         <div class="carrossel">
             <div class="gallery">
-            <div style="--i: url(/fotos/interestelar.jpg);"></div>
-            <div style="--i: url('/fotos/operhaimer.jpg');"></div>
-            <div style="--i: url('/fotos/tudoemtodolugar.jpg');"></div>
-             </div>
+                <div style="--i: url({% static 'media/galeria/interestelar.jpg' %});"></div>
+                <div style="--i: url({% static 'media/galeria/oppenheimer.jpg' %});"></div>
+                <div style="--i: url({% static 'media/galeria/tudoemtodolugar.jpg' %});"></div>
+            </div>
         </div>
 
         </section>
         <div class="galeria">
             <strong>Adicionados Recentemente</strong>
             <div class="foto1">
-                <main><a href="/Página em Andamento/index.html"><img src="/{% static 'media/galeria/baby-drive.png' %}"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/baby-drive.png' %}"
                             alt="Em Ritmo de Fuga"></a>
                     Em Ritmo de Fuga <br>
                     50
@@ -102,7 +103,7 @@
                     Jhonny Bravo<br>
                     50
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/carros.png' %}" 
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/carros.png' %}"
                             alt="Carros"></a>
                     Carros<br>
                     30
@@ -117,13 +118,13 @@
                     Breaking Bad <br>
                     60
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Alchemist.png' %}"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Fullmetal Alchemist.png' %}"
                             alt="Fullmetal Alchemist"></a>
                     Fullmetal Alchemist <br>
                     40
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Cheias de charme.png' %}"
-                            alt="Cheias de Charme"></a>
+                <main><a href="/Página em Andamento/index.html"><img
+                            src="{% static 'media/galeria/Cheias de charme.png' %}" alt="Cheias de Charme"></a>
                     Cheias de Charme <br>
                     50
                 </main>
@@ -131,8 +132,8 @@
             <strong>Relacionados</strong>
             <div class="foto1">
 
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Game of Thrones.png' %}"
-                            alt="Game of Thrones"></a>
+                <main><a href="/Página em Andamento/index.html"><img
+                            src="{% static 'media/galeria/Game of Thrones.png' %}" alt="Game of Thrones"></a>
                     Game of Thrones <br>
                     40
                 </main>
@@ -141,22 +142,23 @@
                     O Iluminado<br>
                     20
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Da Cor do Pecado.png' %}"
-                            alt="Da Cor do Pecado"></a>
+                <main><a href="/Página em Andamento/index.html"><img
+                            src="{% static 'media/galeria/Da Cor do Pecado.png' %}" alt="Da Cor do Pecado"></a>
                     Da Cor do Pecado<br>
                     40
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Amelie.png' %}" alt="Amelie"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Amelie.png' %}"
+                            alt="Amelie"></a>
                     Amelie <br>
                     60
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Lilo e Stitch.png' %}"
-                            alt="Lilo e Stitch"></a>
+                <main><a href="/Página em Andamento/index.html"><img
+                            src="{% static 'media/galeria/Lilo e Stitch.png' %}" alt="Lilo e Stitch"></a>
                     Lilo e Stitch <br>
                     40
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Akame Ga Kill.png' %}"
-                            alt="Akame Ga Kill"></a>
+                <main><a href="/Página em Andamento/index.html"><img
+                            src="{% static 'media/galeria/Akame Ga Kill.png' %}" alt="Akame Ga Kill"></a>
                     Akame Ga Kill <br>/
                     40
                 </main>
@@ -168,48 +170,48 @@
             </div>
             <div>
                 <div class="carrossel">
-                <div class="gallery">
-                <div style="--i: url(/fotos/Breaking-Bad.jpg);"></div>
-                <div style="--i: url('/fotos/Friends.jpg');"></div>
-                <div style="--i: url('/fotos/The-Big-Bang.jpg');"></div>
-                 </div>
-            </div>
+                    <div class="gallery">
+                        <div style="--i: url({% static 'media/galeria/Breaking-Bad.jpg' %});"></div>
+                        <div style="--i: url({% static 'media/galeria/Friends.jpg' %});"></div>
+                        <div style="--i: url({% static 'media/galeria/The-Big-Bang.jpg' %});"></div>
+                    </div>
+                </div>
             </div>
 
 
             <strong>Sugestões da Semana</strong>
             <div class="foto1">
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Procurando Nemo.png"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Procurando Nemo.png' %}"
                             alt="Procurando Nemo"></a>
                     Procurando Nemo <br>
                     50
-                </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Chocolate com Pimenta.png"
+                </main>/fotos/galeria
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Chocolate com Pimenta.png' %}"
                             alt="Chocolate com Pimenta"></a>
                     Chocolate com Pimenta<br>
                     40
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Attack On Titan.png"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Attack On Titan.png' %}"
                             alt="Attack On Titan"></a>
                     Attack On Titan<br>
                     60
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/The Walking Dead.png"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/The Walking Dead.png' %}"
                             alt="The Walking Dead"></a>
                     The Walking Dead <br>
                     20
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Psicopata Americano.png"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Psicopata Americano.png' %}"
                             alt="Psicopata Americano"></a>
                     Psicopata Americano <br>
                     60
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Caminho das Índias.png"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Caminho das Índias.png' %}"
                             alt="Caminho das Índias"></a>
                     Caminho das Índias<br>
                     40
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Kick Buttowski.png"
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Kick Buttowski.png' %}"
                             alt="Kick Buttowski"></a>
                     Kick Buttowski <br>
                     50
@@ -217,31 +219,37 @@
             </div>
             <strong>Internacionais</strong>
             <div class="foto1">
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Alice in Borderland.png" alt="Alice in Borderland"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Alice in Borderland.png' %}"
+                            alt="Alice in Borderland"></a>
                     Alice in Borderland <br>
                     70
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Death Note.png" alt="Death Note"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Death Note.png' %}"
+                            alt="Death Note"></a>
                     Death Note<br>
                     75
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/The 100.png" alt="The 100"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/The 100.png' %}"></a>
                     The 100<br>
                     100
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Marley & Eu.png" alt="Marley & Eu"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Marley & Eu.png' %}"
+                            alt="Marley & Eu"></a>
                     Marley & Eu <br>
                     37
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/The Boys.png" alt="The Boys"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/The Boys.png' %}"
+                            alt="The Boys"></a>
                     The Boys <br>
                     50
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/Taxi Driver.png" alt="Taxi Driver"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/Taxi Driver.png' %}"
+                            alt="Taxi Driver"></a>
                     Taxi Driver<br>
                     20
                 </main>
-                <main><a href="/Página em Andamento/index.html"><img src="/fotos/galeria/The Simpsons.png" alt="The Simpsons"></a>
+                <main><a href="/Página em Andamento/index.html"><img src="{% static 'media/galeria/The Simpsons.png' %}"
+                            alt="The Simpsons"></a>
                     The Simpsons <br>
                     200
                 </main>
@@ -252,7 +260,7 @@
                 <div class="row-footer">
 
                     <div class="footer-col">
-                       <h4><strong>Empresa</strong></h4>
+                        <h4><strong>Empresa</strong></h4>
                         <ul>
                             <li><a href="#"> Quem somos </a></li>
                             <li><a href=""> nossos serviços </a></li>
@@ -266,8 +274,8 @@
                             <li><a href="#">FAQ</a></li>
                         </ul>
                     </div>
-    
-                   
+
+
                     <div class="footer-col">
                         <h4><strong>Seja um Colaborador!</strong></h4>
                         <div class="form-sub">
@@ -276,14 +284,14 @@
                                 <button>subscrever</button>
                             </form>
                         </div>
-    
+
                         <div class="medias-socias">
                             <a href="#"> <i class="fa-regular fa-envelope"></i> </a>
                             <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
                             <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
                             <a href="#"> <i class="fa-brands fa-x-twitter"></i> </a>
                         </div>
-    
+
                     </div>
 
                 </div>

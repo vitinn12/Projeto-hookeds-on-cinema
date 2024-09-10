@@ -67,7 +67,7 @@ header .menu a i {
     position: absolute;
     display: none;
     background-color: #7200A8;
-    color: #ffffff;
+    color: #815555;
     border-radius: 10px;
     width: 155px;
 }
@@ -135,7 +135,7 @@ header .menu a i {
 /* ============= COMP1 ============== */
 .comp1 {
     background-color: var(--roxo_claro);
-    height: 700px;
+    height: 600px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -151,12 +151,15 @@ header .menu a i {
     font-size: 1.2rem;
 }
 .comp1 .imagem-comp1 {
+    height: 420px;
     background-color: white;
     border-radius:23% 77% 21% 79% / 72% 58% 42% 28%  ;
+    display: flex;
+    align-items: center;
     
 }
 .comp1 .imagem-comp1 img {
-    width: 500px;
+    width: 400px;
     height: 600px;
     object-fit: contain;
 }

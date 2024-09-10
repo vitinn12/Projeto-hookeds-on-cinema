@@ -1,113 +1,160 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="{% static 'media/logo.png' %}" type="image/x-icon" />
   <script src="https://kit.fontawesome.com/e9bb3fc60a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="shortcut icon" href="{% static 'media/icons/logo.png' %}" type="image/x-icon">
   <title>Hookeds On Cinema</title>
 </head>
 
 <body>
-  <header>
+  <header> <!--===== CABEÇALHO =====-->
+
     <div class="logo">
       <img src="{% static 'media/icons/logo.png' %}" />
     </div>
-    <section class="menu"> <!--===== CABEÇALHO =====-->
 
-        <a href="/Página em Andamento/index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="/Página em Andamento/index.html"><i class="fas fa-fire"></i> Tendências</a>
-        <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a>
+    <section class="menu">
 
-        <!--====== MENU ======-->
-        <div class="menuzinho">
-          <a href="/Página em Andamento/index.html"><i class="fas fa-th-list"></i> Categorias</a>
-          <div class="submenu">
-            <ul>
-              <li>
-                <i class="fas fa-film"></i><a href="#">Animação</a>
-              </li>
-              <hr />
-              <li>
-                <i class="fas fa-tv"></i><a href="#">Anime</a>
-              </li>
-              <hr />
-              <li>
-                <i class="fas fa-fist-raised"></i><a href="#">Ação</a>
-              </li>
-              <hr />
-              <li>
-                <i class="fas fa-map"></i><a href="#">Aventura</a>
-              </li>
-              <hr />
-              <li>
-                <i class="fas fa-theater-masks"></i><a href="#">Drama</a>
-              </li>
-            </ul>
-          </div>
+      <a href="/Página em Andamento/index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="/Página em Andamento/index.html"><i class="fas fa-fire"></i> Tendências</a>
+      <!-- <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a> -->
+
+      <!--====== MENU ======-->
+      <div class="menuzinho">
+        <a href="/Página em Andamento/index.html"><i class="fas fa-th-list"></i> Categorias</a>
+        <div class="submenu">
+          <ul>
+            <li>
+              <i class="fas fa-film"></i><a href="#">Animação</a>
+            </li>
+            <li>
+              <i class="fas fa-tv"></i><a href="#">Anime</a>
+            </li>
+            <li>
+              <i class="fas fa-fist-raised"></i><a href="#">Ação</a>
+            </li>
+            <li>
+              <i class="fas fa-map"></i><a href="#">Aventura</a>
+            </li>
+            <li>
+              <i class="fas fa-theater-masks"></i><a href="#">Drama</a>
+            </li>
+          </ul>
         </div>
-        
-        <!--====== FIM DO MENU ======-->
+      </div>
+
+      <!--====== FIM DO MENU ======-->
 
     </section>
 
     <div class="input_perfil">
       <div class="search-perfil">
-      <input type="search" href="/Página em Andamento/index.html" placeholder="Pesquisar" /><a
-        href="Página em Andamento/index.html"><i class="fas fa-search"></i></a>
+        <input type="search" href="/Página em Andamento/index.html" placeholder="Pesquisar" />
+        <a href="Página em Andamento/index.html"><i class="fas fa-search"></i></a>
       </div>
       <div class="perfil">
-        <a href="" class="btn-logar">Logar</a>
-        <a href="" class="btn-registrar">Registrar</a>
+        <a href="#" class="btn-logar">Logar</a>
+        <a href="#" class="btn-registrar">Registrar</a>
       </div>
     </div>
-  </header>
 
+  </header>
+  <!--===== FIM DO CABEÇALHO =====-->
 
   <!-- ===== CONTAINER =====-->
-  <main class="container">
+<main class="container">
 
     <section class="comp1">
-      <div class="texto-comp1">
-        <h1>Hookeds on Cinema </h1>
-        <p>
-          A trilha sonora perfeita para
-          todos os momentos.
-        </p>
+      <main>
+          <div class="texto-comp1">
+            <h1>Hookeds on Cinema </h1>
+            <p>
+              A trilha sonora perfeita para
+              todos os momentos.
+            </p>
+          </div>
+
+          <div class="imagem-comp1">
+            <img src="{% static 'media/icons/imagem-corpo.png' %}" alt="">
+          </div>
+      </main>
+
+    </section>
+    
+    <section class="adicionados">
+    <article>
+      <h1>Adicionados recentemente</h1>
+      <div class="adicionados-cards">
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+          
+        </div>
       </div>
 
-      <div class="imagem-comp1">
-        <img src="{% static 'media/icons/imagem-corpo.png' %}" alt="">
-      </div>
+
+    </article>
 
     </section>
 
     <section class="carrossel"><!-- ===carrosel===-->
-        <div class="gallery">
-          <div style="--i: url({% static 'media/galeria/interestelar.jpg' %});"></div>
-          <div style="--i: url({% static 'media/galeria/oppenheimer.jpg' %});"></div>
-          <div style="--i: url({% static 'media/galeria/Deadpool & Wolverine.jpg' %});"></div>
-            </div>
+      <div class="gallery">
+        <div style="--i: url({% static 'media/galeria/interestelar.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/oppenheimer.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/Deadpool & Wolverine.jpg' %});"></div>
+      </div>
+      </div>
+    </section> <!-- === fim do carrosel ===-->
+
+    <section class="adicionados">
+      <article>
+        <h1>Relacionados</h1>
+        <div class="adicionados-cards">
+          <div class="card">
+  
+          </div>
+          <div class="card">
+  
+          </div>
+          <div class="card">
+  
+          </div>
+          <div class="card">
+            
+          </div>
         </div>
-      </section> <!-- === fim do carrosel ===-->
-
-      <div class="carrossel"> <!-- ===carrosel===-->
-        <div class="gallery">
-          <div style="--i: url({% static 'media/galeria/The Office.jpg' %});"></div>
-          <div style="--i: url({% static 'media/galeria/Friends.jpg' %});"></div>
-          <div style="--i: url({% static 'media/galeria/The Big Bang.jpg' %});"></div>
-        </div>
-      </div> <!-- === fim do carrosel ===-->
+  
+  
+      </article>
+  
+      </section>
 
 
+    <div class="carrossel"> <!-- ===carrosel===-->
+      <div class="gallery">
+        <div style="--i: url({% static 'media/galeria/The Office.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/Friends.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/The Big Bang.jpg' %});"></div>
+      </div>
+    </div> <!-- === fim do carrosel ===-->
 
   </main>
-   <!-- ===== FIM DO CONTAINER =====-->
-  
+  <!-- ===== FIM DO CONTAINER =====-->
+
   <!-- ===== RODAPE =====-->
   <footer>
     <div class="container-footer">
@@ -155,6 +202,7 @@
     </div>
   </footer>
   <!-- ===== FIM DO RODAPE =====-->
+   <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>

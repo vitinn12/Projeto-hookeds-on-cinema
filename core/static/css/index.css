@@ -1,27 +1,33 @@
+:root {
+    --preto: #020202;
+    --roxo_padrao:#7200A8;
+    --roxo_claro:#4C006F;
+    --amarelo: #FFC107;
+}
+
 body {
+    padding: 0;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #000000;
+    box-sizing: border-box;
+    background-color: var(--preto);
 }
 
-.container {
-    width: 100%;
-}
+
+/* =====- CABEÇALHO ====== */
 
 header {
-    background-color: #000000;
-    padding: 20px;
-}
-
-.logo {
+    background-color: var(--roxo_padrao);
     display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .logo img {
     width: 60px;
     height: 50px;
-    margin-right: 20px;
 }
 
 .logo h1 {
@@ -29,49 +35,39 @@ header {
     letter-spacing: 0.1px;
 }
 
-.logo h1 span {
-    display: inline-block;
-    animation: letras 3s ease infinite;
-}
-
-@keyframes letras {
-    0% {
-        transform: translateY(0);
-    }
-    10% {
-        transform: translateY(-2rem);
-    }
-    20% {
-        transform: translateY(0);
-    }
-}
-
-nav {
-    background-color: #7200A8;
+header .menu{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    gap: 35px;
+}
+header .menu a{
+    text-decoration: none;
+    color: white;
+    transition: 1s all;
+    
+}
+header .menu a:hover{
+    text-decoration: underline white 2px;
+    text-underline-offset: 5px ;
+    transition: 1s all;
+}
+header .menu a i {
+    padding-right: 2px;
 }
 
-.menu {
-    list-style: none;
-    display: flex;
-}
-
-.menu li {
-    margin-right: 20px;
-}
 
 .menuzinho {
     position: relative;
 }
-
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
 .submenu {
     position: absolute;
     display: none;
     background-color: #7200A8;
-    color: #FFC107;
+    color: #ffffff;
     border-radius: 10px;
     width: 155px;
 }
@@ -86,13 +82,9 @@ nav {
     z-index: 1;
 }
 
-nav a {
-    text-decoration: none;
-    color: #FFC107;
-}
-
-nav a:hover {
-    color: #ffffff;
+.input_perfil{
+    display: flex;
+    align-items: center;
 }
 
 .search-perfil {
@@ -104,11 +96,11 @@ nav a:hover {
     margin-right: 4px;
     padding: 8px;
     border: none;
-    border-radius: 40px;
+    border-radius: 10px;
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    color: rgb(212, 93, 93);
     outline: none;
-    width: 200px;
+    width: 160px;
     transition: width 0.4s ease;
 }
 
@@ -122,35 +114,56 @@ nav a:hover {
     color: #FFC107;
     font-size: 18px;
 }
-
-.menuzinho2 {
-    position: relative;
+.btn-logar{
+    background-color: white;
+    width: 10px;
+    height: 50px;
+    color: black;
+    text-decoration: none;
+}
+.btn-registrar{
+    background-color: white;
+    width: 220px;
+    height: 50px;
+    color: black;
+    text-decoration: none;
 }
 
-.submenu2 {
-    position: absolute;
-    display: none;
-    background-color: #7200A8;
-    color: #FFC107;
-    border-radius: 10px;
-    width: 80px;
+/* ======== FIM DO CABEÇALHO ======== */
+
+/* ============= MENU PRINCIPAL ============== */
+
+/* ============= COMP1 ============== */
+.comp1 {
+    background-color: var(--roxo_claro);
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.submenu2 ul {
-    list-style-type: none;
-    padding: 10px;
+.comp1 .texto-comp1 h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+.comp1 .texto-comp1 p{
+    width: 300px;
+    color: white;
+    font-size: 1.2rem;
+}
+.comp1 .imagem-comp1 {
+    background-color: white;
+    border-radius:23% 77% 21% 79% / 72% 58% 42% 28%  ;
+    
+}
+.comp1 .imagem-comp1 img {
+    width: 500px;
+    height: 600px;
+    object-fit: contain;
 }
 
-.menuzinho2:hover .submenu2 {
-    display: block;
-    z-index: 1;
-}
+/* ============= FIM DO COMP1 ============== */
 
-.fotoperfil {
-    width: 45px; 
-    height: 45px;
-    border-radius: 50%;
-}
 
 .carrossel {
     background-color: #000000;
@@ -222,6 +235,8 @@ nav a:hover {
 .foto1 img:hover {
     transform: scale(1.2);
 }
+
+/* ============= FIM DO MENU PRINCIPAL ============== */
 
 footer {
     background-color: #7200A8;

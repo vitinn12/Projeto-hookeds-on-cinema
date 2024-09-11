@@ -257,23 +257,28 @@ header .perfil .btn-registrar:hover,
   height: 80%;
   border-radius: 20px;
   padding: 1rem;
-  background-color: var(--amarelo);
-
 }
 
 .adicionados article .adicionados-cards {
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   gap: 10px;
 
 }
 
 .adicionados article .adicionados-cards .card {
-  width: 500px;
-  height: 100px;
+  width: 400px;
+  height: 150px;
   background-color: var(--cinza);
+  display: flex;
+  color: white;
+}
+.adicionados-cards .card .imagem-adicionados img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
 /* ============= FIM DO ADICIONADOS RECENTEMENTE ============== */

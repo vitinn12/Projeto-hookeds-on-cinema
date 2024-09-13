@@ -16,13 +16,13 @@
 <body>
   <header> <!--===== CABEÇALHO =====-->
 
-    <div class="logo">
+    <a href="{% url 'paginaPrincipal' %}" class="logo">
       <img src="{% static 'media/icons/logo.png' %}" />
-    </div>
+    </a>
 
     <section class="menu">
 
-      <a href="" ><i class="fas fa-home"></i> Home</a>
+      <a href="{% url 'paginaPrincipal' %}" ><i class="fas fa-home"></i> Home</a>
       <a href="" class="btn-tendencias"><i class="fas fa-fire"></i><span>Tendências</span> </a>
       <!-- <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a> -->
 
@@ -193,35 +193,35 @@
         <div class="adicionados-cards">
           <div class="card">
             <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/the 100.png'  %}" alt="">
+              <img src="{% static 'media/galeria/the simpsons.png'  %}" alt="">
 
             
             <span class="texto">
-              <h3>The 100</h3>
-              <h5>2014</h5>
+              <h3>The Simpsons</h3>
+              <h5>1989</h5>
             </span>
           </div>
             <a href="">Acessar</a>
           </div>
           <div class="card">
             <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/titanic.jpg'  %}" alt="">
+              <img src="{% static 'media/galeria/taxi driver.png'  %}" alt="">
 
             <span class="texto">
-              <h3>Titanic</h3>
-              <h5>1998</h5>
+              <h3>Taxi Driver</h3>
+              <h5>1976</h5>
             </span>
           </div>
             <a href="">Acessar</a>
           </div>
           <div class="card">
             <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/o Iluminado.png'  %}" alt="">
+              <img src="{% static 'media/galeria/psicopata americano.png'  %}" alt="">
 
             
             <span class="texto">
-              <h3>O Iluminado</h3>
-              <h5>1980</h5>
+              <h3>Psicopata Americano</h3>
+              <h5>2000</h5>
             </span>
           </div>
             <a href="">Acessar</a>
@@ -229,16 +229,44 @@
 
           <div class="card">
             <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/carros.png'  %}" alt="">
+              <img src="{% static 'media/galeria/marley & eu.png'  %}" alt="">
 
             
             <span class="texto">
-              <h3>Carros</h3>
-              <h5>2006</h5>
+              <h3>Marley e Eu</h3>
+              <h5>2008</h5>
             </span>
           </div>
             <a href="">Acessar</a>
           </div>
+
+          
+          <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/game of thrones.png'  %}" alt="">
+
+            
+            <span class="texto">
+              <h3>Game Of Trhones</h3>
+              <h5>2011</h5>
+            </span>
+          </div>
+            <a href="">Acessar</a>
+          </div>
+
+          <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/Baby Driver.jpg'  %}" alt="">
+
+            
+            <span class="texto">
+              <h3>Baby Driver</h3>
+              <h5>2017</h5>
+            </span>
+          </div>
+            <a href="">Acessar</a>
+          </div>
+
           </div>
 
 

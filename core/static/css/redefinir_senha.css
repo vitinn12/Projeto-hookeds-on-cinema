@@ -1,0 +1,94 @@
+:root{
+    --roxo_padrao: #7200A8;
+    --laranja_padrao: #FFC107;
+    --branco_padrao: #F8F8F8;
+    --roxo_perfil: rgb(130, 87, 230);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============== Container =============== */
+
+.container {
+    height: 1000px;
+    background-color: black;
+    padding-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+.primeira_aba{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 400px;
+}
+.aba-dados-pessoais, .aba-seguranca{
+    background-color: var(--roxo_padrao);
+    width: 250px;
+    height: 50px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+.aba-sair {
+    background-color: red;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.aba-dados-pessoais:hover, .aba-seguranca:hover, .aba-sair:hover{
+    background-color: #FFFFFF;
+    color: black;
+    transition: 0.7s all;
+}
+
+
+
+.aba-dados-pessoais h1, .aba-seguranca h1, .aba-sair h1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ====Segunda aba==== */
+.segunda_aba{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 600px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 25px;
+    gap: 30px;
+}
+.redefinir button {
+    border: none;
+    background-color: #7200A8;
+    color: white;
+    width: 120px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* ====fim da segunda aba==== */
+
+

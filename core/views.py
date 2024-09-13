@@ -12,5 +12,10 @@ def user (request):
 def index (request):
     return render (request, 'paginas/index.html')
 
-def teste (request):
-    return render (request, 'paginas/teste.html')
+def redefinir_senha(request):
+    return render (request, 'paginas/redefinir_senha.html')
+
+def master (request):
+    return render (request, 'paginas/master.html')
+
+

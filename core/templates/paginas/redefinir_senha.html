@@ -1,0 +1,42 @@
+{% extends 'paginas/master.html'  %}
+{% load static %}
+
+
+{% block content %}
+
+    <link rel="stylesheet" href="{%static 'css/redefinir_senha.css'%}">
+
+    <!--============= CONTAINER ===========-->
+    <div class="container">
+        <main class="primeira_aba">
+            <a href="{% url 'areadousuario' %}" class="aba-dados-pessoais">
+                <i class="fa-solid fa-user"></i>
+                <h1>Dados Pessoais</h1>
+            </a>
+            <a href="{% url 'redefinir_senha' %}" class="aba-seguranca">
+                <i class="fa-solid fa-lock"></i>
+                <h1>Segurança</h1>
+            </a>
+            <a href="#" class="aba-sair">
+                <i class="fa-solid fa-door-open"></i>
+                <h1>Sair</h1>
+            </a>
+
+        </main>
+
+        <main class="segunda_aba">
+            <h2>Redefinir a senha</h2>
+
+            <div class="redefinir">
+                <form method="post">
+
+                    <button type="submit">Redefinir Senha</button>
+                </form>
+            </div>
+            
+
+        </main>
+    </div>
+
+
+{% endblock %}

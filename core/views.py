@@ -50,6 +50,9 @@ def perfil_usuario(request):
 @login_required(login_url='/login/')
 def home(request):
     return render(request, 'paginas/home.html')  
+
+
+
 def redefinir_senha(request):
     return render (request, 'paginas/redefinir_senha.html')
 

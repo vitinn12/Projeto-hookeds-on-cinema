@@ -7,39 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e9bb3fc60a.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/fotos/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="{%static 'css/registro.css'%}">
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
     <title>Registrar</title>
 </head>
 <body>
 
 <div class="container">
-    <div class="form register-form">
-        <h2>Registrar <i class="fas fa-user-plus"></i></h2>
-        <div class="input-group">
-            <label for="register-email">
-                <i class="fas fa-envelope"></i>
-                <input type="email" id="register-email" placeholder="Digite seu Email" name="email">
-            </label>
+    <form action="{% url 'registro' %}" method='POST'>
+         {% csrf_token %}
+        <div class="form register-form">
+            <h2>Registrar <i class="fas fa-user-plus"></i></h2>
+            <div class="input-group">
+                <label for="register-email">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="register-usuario" placeholder="Digite seu usuário" name="usuario">
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="register-password">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="register-password" placeholder="Escolha uma senha" name="senha">
+                </label>
+            </div>
+            
+            <a href="/login/index.html">
+                <input type="submit" class="btn btn-indigo" value="Cadastrar">
+            </a>
+            <a href="{% url 'paginaPrincipal' %}">
+                <button class="back-btn">Voltar para o Início <i class="fas fa-home"></i></button>
+            </a>
+            <p>Já tem uma conta? <a href="index.html" class="login-link">Login <i class="fas fa-sign-in-alt"></i></a></p>
         </div>
-        <div class="input-group">
-            <label for="register-password">
-                <i class="fas fa-lock"></i> 
-                <input type="password" id="register-password" placeholder="Escolha uma senha"  name="senha">
-            </label>
-        </div>
-        <div class="input-group">
-            <label for="confirm-password"><i class="fas fa-lock"></i> 
-                <input type="password" id="confirm-password" placeholder="Confirme sua senha" name= "confirmar_senha">
-            </label>
-        </div>
-        <a href="/login/index.html">
-            <input type="submit" class="btn btn-indigo" value="Cadastrar">
-        </a>
-        <a href="{% url 'paginaPrincipal' %}">
-            <button class="back-btn">Voltar para o Início <i class="fas fa-home"></i></button>
-        </a>
-        <p>Já tem uma conta? <a href="index.html" class="login-link">Login <i class="fas fa-sign-in-alt"></i></a></p>
-    </div>
+    </form>
 </div>
 
 </body>

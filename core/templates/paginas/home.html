@@ -1,0 +1,225 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/e9bb3fc60a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="shortcut icon" href="{% static 'media/icons/logo.png' %}" type="image/x-icon">
+  <title>Hookeds On Cinema</title>
+</head>
+
+<body>
+  <header> <!--===== CABEÇALHO =====-->
+
+    <div class="logo">
+      <img src="{% static 'media/icons/logo.png' %}" />
+    </div>
+
+    <section class="menu">
+
+      <a href="/Página em Andamento/index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="/Página em Andamento/index.html"><i class="fas fa-fire"></i> Tendências</a>
+      <!-- <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a> -->
+
+      <!--====== MENU ======-->
+      <div class="menuzinho">
+        <a href="/Página em Andamento/index.html"><i class="fas fa-th-list"></i> Categorias</a>
+        <div class="submenu">
+          <ul>
+            <li>
+              <i class="fas fa-film"></i><a href="#">Animação</a>
+            </li>
+            <li>
+              <i class="fas fa-tv"></i><a href="#">Anime</a>
+            </li>
+            <li>
+              <i class="fas fa-fist-raised"></i><a href="#">Ação</a>
+            </li>
+            <li>
+              <i class="fas fa-map"></i><a href="#">Aventura</a>
+            </li>
+            <li>
+              <i class="fas fa-theater-masks"></i><a href="#">Drama</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--====== FIM DO MENU ======-->
+
+    </section>
+
+    <div class="input_perfil">
+      <div class="search-perfil">
+        <input type="search" href="/Página em Andamento/index.html" placeholder="Pesquisar" />
+        <a href="Página em Andamento/index.html"><i class="fas fa-search"></i></a>
+      </div>
+      <div class="perfil">
+        <a href="{% url 'perfil_usuario' %}" class="btn-perfil">perfil</a>
+        <a href="{% url 'registro' %}" class="btn-registrar">Adicionar trilha</a>   <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
+      </div>
+    </div>
+
+  </header>
+  <!--===== FIM DO CABEÇALHO =====-->
+
+  <!-- ===== CONTAINER =====-->
+  <main class="container">
+
+    <section class="comp1">
+      <main>
+        <div class="texto-comp1">
+          <h1>Hookeds on Cinema </h1>
+          <p>
+            A trilha sonora perfeita para
+            todos os momentos.
+          </p>
+        </div>
+
+        <div class="imagem-comp1">
+          <img src="{% static 'media/icons/imagem-corpo.png' %}" alt="">
+        </div>
+      </main>
+
+    </section>
+    
+    <section class="adicionados">
+      <article>
+        <h1>Adicionados recentemente</h1>
+        <div class="adicionados-cards">
+          <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/the 100.png'  %}" alt="">
+
+            </div>
+            <span class="texto">
+              <h3>The 100</h3>
+              <h4>2014</h4>
+              </span>
+            <a href="">Acessar</a>
+          </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+
+
+        </div> <!-- ==================== FIM DOS ADICIONANDOS ======================-->
+
+
+
+      </article>
+
+    </section>
+
+    <section class="carrossel"><!-- ===carrosel===-->
+      <div class="gallery">
+        <div style="--i: url({% static 'media/galeria/interestelar.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/oppenheimer.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/Deadpool & Wolverine.jpg' %});"></div>
+      </div>
+      </div>
+    </section> <!-- === fim do carrosel ===-->
+
+    <section class="adicionados">
+      <article>
+        <h1>Relacionados</h1>
+        <div class="adicionados-cards">
+          <div class="card">
+            a
+          </div>
+          <div class="card">
+
+          </div>
+          <div class="card">
+
+          </div>
+          <div class="card">
+
+          </div>
+        </div>
+
+
+      </article>
+
+    </section>
+
+
+    <div class="carrossel"> <!-- ===carrosel===-->
+      <div class="gallery">
+        <div style="--i: url({% static 'media/galeria/The Office.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/Friends.jpg' %});"></div>
+        <div style="--i: url({% static 'media/galeria/The Big Bang.jpg' %});"></div>
+      </div>
+    </div> <!-- === fim do carrosel ===-->
+
+  </main>
+  <!-- ===== FIM DO CONTAINER =====-->
+
+  <!-- ===== RODAPE =====-->
+  <footer>
+    <div class="container-footer">
+      <div class="row-footer">
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li>
+              <a href="#">Quem somos</a>
+            </li>
+            <li>
+              <a href="#">Nossos serviços</a>
+            </li>
+            <li>
+              <a href="#">Política de privacidade</a>
+            </li>
+            <li>
+              <a href="#">Programa de afiliados</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Obter ajuda</h4>
+          <ul>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Seja um Colaborador!</h4>
+          <form class="form-sub">
+            <input type="email" placeholder="Digite o seu e-mail" required />
+            <button type="submit">Subscrever</button>
+          </form>
+
+          <div class="medias-socias">
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FIM DO RODAPE =====-->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

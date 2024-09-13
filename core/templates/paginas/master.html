@@ -1,0 +1,69 @@
+{% load static %}
+
+{% block head %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e9bb3fc60a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="{% static 'media/icons/logo.png' %}" type="image/x-icon">
+    <title>Hookeds On Cinema</title>
+  </head>
+{% endblock %}
+<body> 
+  {% block header %} 
+        <header> <!--===== CABEÇALHO =====-->
+
+            <div class="logo">
+            <img src="{% static 'media/icons/logo.png' %}" />
+            </div>
+
+            <section class="menu">
+
+            <a href="/Página em Andamento/index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="/Página em Andamento/index.html"><i class="fas fa-fire"></i> Tendências</a>
+            <!-- <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a> -->
+
+            <!--====== MENU ======-->
+            <div class="menuzinho">
+                <a href="/Página em Andamento/index.html"><i class="fas fa-th-list"></i> Categorias</a>
+                <div class="submenu">
+                <ul>
+                    <li>
+                    <i class="fas fa-film"></i><a href="#">Animação</a>
+                    </li>
+                    <li>
+                    <i class="fas fa-tv"></i><a href="#">Anime</a>
+                    </li>
+                    <li>
+                    <i class="fas fa-fist-raised"></i><a href="#">Ação</a>
+                    </li>
+                    <li>
+                    <i class="fas fa-map"></i><a href="#">Aventura</a>
+                    </li>
+                    <li>
+                    <i class="fas fa-theater-masks"></i><a href="#">Drama</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <!--====== FIM DO MENU ======-->
+
+            </section>
+
+            <div class="input_perfil">
+            <div class="search-perfil">
+                <input type="search" href="/Página em Andamento/index.html" placeholder="Pesquisar" />
+                <a href="Página em Andamento/index.html"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="perfil">
+                <a href="{% url 'login' %}" class="btn-logar">Logar</a>
+                <a href="{% url 'registro' %}" class="btn-registrar">Registrar</a>
+            </div>
+            </div>
+
+        </header>
+  {% endblock %} 
+  </body> 

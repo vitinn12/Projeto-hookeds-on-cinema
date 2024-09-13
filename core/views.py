@@ -11,3 +11,6 @@ def user (request):
 
 def index (request):
     return render (request, 'paginas/index.html')
+
+def teste (request):
+    return render (request, 'paginas/teste.html')

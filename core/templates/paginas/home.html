@@ -7,6 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/e9bb3fc60a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">n
   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
   <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="shortcut icon" href="{% static 'media/icons/logo.png' %}" type="image/x-icon">
@@ -24,7 +25,7 @@
 
       <a href="/Página em Andamento/index.html"><i class="fas fa-home"></i> Home</a>
       <a href="/Página em Andamento/index.html"><i class="fas fa-fire"></i> Tendências</a>
-      <!-- <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a> -->
+      <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a>
 
       <!--====== MENU ======-->
       <div class="menuzinho">
@@ -90,35 +91,36 @@
     
     <section class="adicionados">
       <article>
-        <h1>Adicionados recentemente</h1>
+        <h1>Playlists</h1>
         <div class="adicionados-cards">
-          <div class="card">
-            <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/the 100.png'  %}" alt="">
 
-            </div>
-            <span class="texto">
-              <h3>The 100</h3>
-              <h4>2014</h4>
-              </span>
-            <a href="">Acessar</a>
-          </div>
-        <div class="card">
+          <main>
+
+            {% for playlist in Playlist %}
+
+                <li>{{playlist.nome_musica}} - {{playlist.album_musica}}</li>
+
+            {% endfor %}
+
+          </main>
+
+          <a href="{% url 'adicionarplaylist' %}" class="adicionar-playlist">
+            <i class="fa-solid fa-plus"></i>
+            <span>
+              Adicionar <br>
+              playlist
+            </span>
+
+          </a>
+
+
+
+
+
+
+
 
         </div>
-        <div class="card">
-
-        </div>
-        <div class="card">
-
-        </div>
-        <div class="card">
-
-        </div>
-        <div class="card">
-
-        </div>
-
 
         </div> <!-- ==================== FIM DOS ADICIONANDOS ======================-->
 

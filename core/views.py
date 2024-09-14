@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.decorators import login_required
+from .models import *
+from .forms import PlaylistForm
 
 
 def login (request):
@@ -44,19 +46,30 @@ def login_user(request):
 def index (request):
     return render (request, 'paginas/index.html')
 
+def areadatriha(request):
+    return render (request, 'paginas/areadatrilha.html')
+
+
 def perfil_usuario(request):
     return render(request, 'paginas/perfil_usuario.html')
 
 @login_required(login_url='/login/')
-def home(request):
-    return render(request, 'paginas/home.html')  
-
-
 
 def redefinir_senha(request):
     return render (request, 'paginas/redefinir_senha.html')
 
-def master (request):
-    return render (request, 'paginas/master.html')
 
+def home(request):
+    Playlist = Playlists.objects.all()
+    return render(request, 'paginas/home.html', {'Playlist': Playlist})
 
+def adicionarplaylist(request):
+    form = PlaylistForm()
+    return render (request ,'paginas/cadastrarplaylist.html', {'form': form})
+
+def view_create_playlist(request):
+    form = PlaylistForm (request.POST)
+    if form.is_valid():
+        form.save()
+        return HttpResponse ("Salvo com sucesso")
+    

@@ -11,7 +11,9 @@ urlpatterns = [
     path ('register/', views.register, name= 'registro'),
     path ('user/', views.User, name= 'areadousuario'),    
     path('redefinir/',views.redefinir_senha, name='redefinir_senha' ),
-    path('master/',views.master, name='master' ),
     path('perfil/', views.perfil_usuario, name='perfil_usuario'),
+    path('addplaylist/', views.adicionarplaylist, name='adicionarplaylist'),
+    path('create_playlist/', views.view_create_playlist, name='createplaylist'),
+    path ('trilha/', views.areadatriha, name='areadatrilha'),
 ]
  

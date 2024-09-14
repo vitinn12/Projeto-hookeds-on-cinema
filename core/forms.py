@@ -1,12 +1,18 @@
 from django import forms
-from core.models import *
+from core.models import Playlists
 
-class UsuarioRegistro(forms.ModelForm):
+
+
+class PlaylistForm (forms.ModelForm):
     class Meta:
-        model = Usuario
-        fields = ['apelido', 'email']
-        labels = (
-            'apelido', 'Nome :',
-            'email' , 'E - mail'
-        )
-)
+        model = Playlists
+        fields = '__all__'
+        labels = {
+            'nome_musica' : 'Nome da Musica',
+            'nome_artista' : 'Nome do Artista',
+            'album_musica' : 'Nome do Album',
+            'link' : 'Link'
+
+        }
+
+

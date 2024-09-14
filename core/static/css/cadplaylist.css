@@ -1,3 +1,11 @@
+:root {
+    --preto: #020202;
+    --roxo_padrao: #7200A8;
+    --roxo_claro: #4C006F;
+    --amarelo: #FFC107;
+    --cinza: #0F0F0F;
+  }
+
 .form {
     background-color: white;
     width: 50%;
@@ -9,3 +17,4 @@
     gap: 40px;
     border-radius: 10px;
 }
+

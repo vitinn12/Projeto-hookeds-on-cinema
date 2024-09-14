@@ -24,7 +24,7 @@
     <section class="menu">
 
       <a href="/Página em Andamento/index.html"><i class="fas fa-home"></i> Home</a>
-      <a href="/Página em Andamento/index.html"><i class="fas fa-fire"></i> Tendências</a>
+      <a href="" class="btn-tendencias"><i class="fas fa-fire"></i><span>Tendências</span> </a>
       <a href="/Página em Andamento/index.html"><i class="fas fa-bookmark"></i> Biblioteca</a>
 
       <!--====== MENU ======-->
@@ -61,8 +61,8 @@
         <a href="Página em Andamento/index.html"><i class="fas fa-search"></i></a>
       </div>
       <div class="perfil">
-        <a href="{% url 'perfil_usuario' %}" class="btn-perfil">perfil</a>
-        <a href="{% url 'registro' %}" class="btn-registrar">Adicionar trilha</a>   <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
+        <a href="{% url 'perfil_usuario' %}" class="btn-perfil">Perfil</a>
+        <a href="{% url 'adicionarplaylist' %}" class="btn-adicionar">Adicionar Playlist</a>   <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
       </div>
     </div>
 
@@ -98,10 +98,11 @@
 
             {% for playlist in Playlist %}
 
-            <li>{{playlist.id}} {{playlist.nome_musica}} - {{playlist.album_musica}} -
+            <li>{{playlist.nome_musica}} - {{playlist.album_musica}} -
               <span>              
-                  <a href="{% url 'editarplaylist' id=playlist.id %}"> Editar</a>
-                  <a href="{% url 'deletarplaylist' id=playlist.id %}"> Deletar</a>  
+                <a href="{% url 'deletarplaylist' id=playlist.id %}">Editar</a>  
+                  <a href="{% url 'editarplaylist' id=playlist.id %}">Deletar</a>
+                  
               </span>
 
 
@@ -150,21 +151,85 @@
       <article>
         <h1>Relacionados</h1>
         <div class="adicionados-cards">
+         
           <div class="card">
-            a
-          </div>
-          <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/the simpsons.png'  %}" alt="">
 
+            
+            <span class="texto">
+              <h3>The Simpsons</h3>
+              <h5>1989</h5>
+            </span>
+          </div>
+            <a href="">Acessar</a>
           </div>
           <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/taxi driver.png'  %}" alt="">
 
+            <span class="texto">
+              <h3>Taxi Driver</h3>
+              <h5>1976</h5>
+            </span>
+          </div>
+            <a href="">Acessar</a>
           </div>
           <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/psicopata americano.png'  %}" alt="">
 
+            
+            <span class="texto">
+              <h3>Psicopata Americano</h3>
+              <h5>2000</h5>
+            </span>
           </div>
+            <a href="">Acessar</a>
+          </div>
+
+          <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/marley & eu.png'  %}" alt="">
+
+            
+            <span class="texto">
+              <h3>Marley e Eu</h3>
+              <h5>2008</h5>
+            </span>
+          </div>
+            <a href="">Acessar</a>
+          </div>
+
+          
+          <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/game of thrones.png'  %}" alt="">
+
+            
+            <span class="texto">
+              <h3>Game Of Trhones</h3>
+              <h5>2011</h5>
+            </span>
+          </div>
+            <a href="">Acessar</a>
+          </div>
+
+          <div class="card">
+            <div class="imagem-adicionados">
+              <img src="{% static 'media/galeria/Baby Driver.jpg'  %}" alt="">
+
+            
+            <span class="texto">
+              <h3>Baby Driver</h3>
+              <h5>2017</h5>
+            </span>
+          </div>
+            <a href="">Acessar</a>
+          </div>
+
+
         </div>
-
-
       </article>
 
     </section>

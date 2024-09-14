@@ -88,5 +88,5 @@ def view_create_playlist(request):
     form = PlaylistForm (request.POST)
     if form.is_valid():
         form.save()
-        return HttpResponse ("Salvo com sucesso")
+        return render (request, 'paginas/playlistsalvo.html')
     

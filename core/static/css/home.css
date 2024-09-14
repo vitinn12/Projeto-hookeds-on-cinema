@@ -5,11 +5,34 @@
     --amarelo: #FFC107;
     --cinza: #0F0F0F;
   }
-
-
+  .btn-perfil{
+    background-color: #4C006F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height:45px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.6s all;
+  }
+ .btn-adicionar{
+    background-color: #4C006F;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height:45px;
+    border-radius: 10px;
+    transition: 0.6s all;
+    font-weight: bold;
+}
+.btn-adicionar:hover, .btn-perfil:hover {
+    transition: 0.6s all;
+    scale: 1.07;
+}
 
 .adicionados-cards {
-    background-color: white;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -43,6 +66,9 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
+}
+.perfil a {
+    background-color: #4C006F;
 }
 .adicionar-playlist span {
     text-align:center;

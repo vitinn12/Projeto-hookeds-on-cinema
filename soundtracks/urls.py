@@ -15,5 +15,8 @@ urlpatterns = [
     path('addplaylist/', views.adicionarplaylist, name='adicionarplaylist'),
     path('create_playlist/', views.view_create_playlist, name='createplaylist'),
     path ('trilha/', views.areadatriha, name='areadatrilha'),
+    path ('editar/<int:id>/', views.editarplaylist, name='editarplaylist'), 
+    path ('update/<int:id>/', views.updateplaylist, name='updateplaylist'), 
+     path ('delete/<int:id>/', views.deleteplaylist, name='deletarplaylist'), 
 ]
  

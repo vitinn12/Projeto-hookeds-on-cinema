@@ -98,8 +98,15 @@
 
             {% for playlist in Playlist %}
 
-                <li>{{playlist.nome_musica}} - {{playlist.album_musica}}</li>
+            <li>{{playlist.id}} {{playlist.nome_musica}} - {{playlist.album_musica}} -
+              <span>              
+                  <a href="{% url 'editarplaylist' id=playlist.id %}"> Editar</a>
+                  <a href="{% url 'deletarplaylist' id=playlist.id %}"> Deletar</a>  
+              </span>
 
+
+               </li>
+                
             {% endfor %}
 
           </main>

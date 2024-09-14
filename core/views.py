@@ -67,7 +67,7 @@ def adicionarplaylist(request):
     form = PlaylistForm()
     return render (request ,'paginas/cadastrarplaylist.html', {'form': form})
 
-def deleteplaylist(request, id):
+def editarplaylist(request, id):
     playlist = Playlists.objects.get(id=id) 
     return render(request, 'paginas/editar.html', {'playlist': playlist})
 
@@ -78,7 +78,7 @@ def updateplaylist (request, id):
     playlist.save()
     return redirect(home)
 
-def editarplaylist(request, id):
+def deleteplaylist(request,id):
     playlist = Playlists.objects.get(id=id) 
     playlist.delete()
     return redirect(home)

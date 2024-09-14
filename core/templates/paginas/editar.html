@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Playlist</title>
-    <link rel="stylesheet" href="{%static 'css/cadplaylist.css'%}">
-    <link rel="stylesheet" href="{%static 'css/redefinir_senha.css'%}">
+    <link rel="stylesheet" href="{%static 'css/playlistsalvo.css'%}">
+
 
 </head>
 <body>
@@ -16,9 +16,10 @@
         <main class="form">
 
             <h2>Editar Playlist </h2>
-            {{playlist.album_musica}}
+            <span><strong>Nome Atual: </strong> {{playlist.album_musica}}</span>
             <form action="{% url 'updateplaylist' id=playlist.id %}" method="post">
                 {% csrf_token %}
+                
                 <input type="text" name="album_musica" id="{{playlist.album_musica}}">
                 <button type="submit"> Salvar </button>
 

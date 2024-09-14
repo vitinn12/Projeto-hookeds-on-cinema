@@ -6,15 +6,65 @@
     --cinza: #0F0F0F;
   }
 
-.form {
-    background-color: white;
-    width: 50%;
-    height: 400px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    border-radius: 10px;
+    height: 100vh;
 }
+
+.container {
+    background: var(--roxo_padrao);
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: white;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: var(--amarelo);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+
 

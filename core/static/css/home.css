@@ -49,6 +49,10 @@
   padding: 10px;
   align-items: center;
 }
+.adicionados{
+
+  align-items: start;
+}
 
 .adicionar-playlist {
   width: 100px;
@@ -102,11 +106,12 @@
 .adicionados-cards {
   align-items: start;
   justify-content: center;
-  height: 200px;
+  height: 500px;
+
 }
 .adicionados-cards main {
   width: 400px;
-  height: 150px;
+  height: 400px;
   padding: 10px;
   background-color: var(--cinza);
   border-radius: 10px;

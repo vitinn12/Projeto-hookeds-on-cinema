@@ -1,24 +1,17 @@
+{% extends 'paginas/master.html'  %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block content %}
     <link rel="stylesheet" href="{% static 'css/areadatrilha.css' %}">
-    <script src="https://kit.fontawesome.com/af6c14a78e.js" crossorigin="anonymous"></script>
-    <title>Area da Trilha</title>
-</head>
 
-<body>
-    <!-- <span><strong>Nome do album atual: </strong> {{playlist.album_musica}}</span> -->
 
-    <section>
+    <section class="section">
         <main>
             <div class="container">
                 <div class="titulo-descricao">
-                    <img src="{{ playlist.imagem }}" alt="{{ playlist.nome_musica }}" />
+                        <img src="{{playlist.image.url}}" alt="{{ playlist.nome_musica }}" />
 
 
                     <h1>{{playlist.nome_musica}}
@@ -46,6 +39,7 @@
                         <h2>{{playlist.nome_musica}}
                             <p>
                                 {{playlist.nome_artista}}
+                                
                             </p>
                         </h2>
                     </div>
@@ -64,6 +58,4 @@
 
     </section>
 
-</body>
-
-</html>
+{% endblock %}

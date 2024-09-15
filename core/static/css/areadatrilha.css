@@ -10,26 +10,27 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Courier New", Courier, monospace;
+
   }
   
   html {
     scroll-behavior: smooth;
     background-color: #000000;
+ 
   }
 
-  section {
+  .section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 200vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
   }
 
-  main {
+  .section main {
     width: 80%;
-    height: 800px;
+    height: 400px;
     background-color: rgb(30, 30, 30);
     display: flex;
     flex-direction: column;
@@ -46,15 +47,20 @@
     justify-content: center;
     gap: 100px;
     width: 100%;
+    font-family: "Courier New", Courier, monospace;
   }
   
   .container img {
     width: 200px;
     height: 200px;
-    border-radius: 35px;
-    padding: 30px;
+
+    border: none;
   }
   
+  .titulo-descricao img {
+    width: 100px;
+    height: 100px;
+  }
   .container h1,
   h2 {
     color: white;
@@ -76,7 +82,7 @@
     font-size: 15px;
   }
   
-  section main hr {
+  .section main hr {
     width: 80%;
   }
   
@@ -166,6 +172,7 @@
     width: 150vh;
     height: 12vh;
     margin: 50px;
+    font-family: "Courier New", Courier, monospace;
   }
   
   .musica1 h1 {
@@ -196,6 +203,10 @@
     text-decoration: none;
     margin-right: 50px;
 
+
+  }
+  .ver-mais a{
+    font-family: "Courier New", Courier, monospace;
   }
   .musica1 i {
     font-size: 30px;

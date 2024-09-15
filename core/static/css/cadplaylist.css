@@ -14,13 +14,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 200vh;
 }
 
 .container {
     background: var(--roxo_padrao);
     border-radius: 8px;
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     padding: 20px;
 }

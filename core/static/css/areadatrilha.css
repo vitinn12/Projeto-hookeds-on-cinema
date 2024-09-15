@@ -1,3 +1,11 @@
+:root {
+  --preto: #020202;
+  --roxo_padrao: #7200A8;
+  --roxo_claro: #4C006F;
+  --amarelo: #FFC107;
+  --cinza: #0F0F0F;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -9,6 +17,16 @@
     scroll-behavior: smooth;
     background-color: #000000;
   }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200vh;
+    justify-content: center;
+    align-items: center;
+  }
+
   main {
     width: 80%;
     height: 800px;
@@ -16,15 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 5px;
-  }
-  section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px;
   }
   .container .titulo-descricao {
     display: flex;
@@ -35,6 +45,7 @@
     align-items: center;
     justify-content: center;
     gap: 100px;
+    width: 100%;
   }
   
   .container img {
@@ -42,7 +53,6 @@
     height: 200px;
     border-radius: 35px;
     padding: 30px;
-    margin-left: 30px;
   }
   
   .container h1,
@@ -54,13 +64,12 @@
   }
   
   .container h1 {
-    font-size: 40px;
+    font-size: 20px;
   }
   
   .container h2 {
     align-items: center;
-    margin-left: -50px;
-    font-size: 30px;
+    font-size: 1rem;
   }
   
   .container h1 p {
@@ -72,18 +81,11 @@
   }
   
   .container h2 p {
-    font-size: 17px;
-    width: 90%;
-    margin-left: 10px;
+    font-size: 12px;
+    width: 220px;
   }
   
-  div[class*="box"] {
-    height: 33.33%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   
   .box-1 {
     background-color: #ff6766;
@@ -99,9 +101,10 @@
     line-height: 50px;
     height: 50px;
     text-align: center;
-    width: 500px;
+    width: 120px;
     cursor: pointer;
-    margin-right: 125px;
+    border-radius: 10px;
+
   }
   
   .btn-one {
@@ -123,6 +126,7 @@
     z-index: 1;
     opacity: 0;
     transition: all 0.3s;
+    border-radius: 10px;
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-top-style: solid;
@@ -132,6 +136,7 @@
     transform: scale(0.1, 1);
   }
   .btn-one:hover::before {
+    
     opacity: 1;
     transform: scale(1, 1);
   }
@@ -144,6 +149,7 @@
     height: 100%;
     z-index: 1;
     transition: all 0.3s;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
   }
   .btn-one:hover::after {
@@ -153,10 +159,12 @@
   
   .musica1 {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #7200a8;
     border-radius: 5px;
     width: 150vh;
-    height: 10vh;
+    height: 12vh;
     margin: 50px;
   }
   
@@ -168,131 +176,68 @@
   }
   
   .musica1 h2 {
-    margin-top: 18px;
     margin-left: 50px;
-    white-space: nowrap;
+    font-size: 19px;
   }
   
   .musica1 h2 p {
-    margin-left: 0px;
     font-size: 15px;
   }
   
+  .texto {
+    display: flex;
+  }
   .musica1 a {
-    height: 0px;
-    width: 0px;
-    position: relative;
-    left: 510px;
-  }
-  
-  .musica1 a img {
-    height: 40px;
-    width: 40px;
-    margin-top: 25px;
-  }
-  
-  .musica2 {
-    display: flex;
-    background-color: #7200a8;
-    border-radius: 5px;
-    width: 150vh;
-    height: 10vh;
-    margin: 50px;
-  }
-  
-  .musica2 h1 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
     color: white;
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
+    text-decoration: none;
+    margin-right: 50px;
+
   }
+  .musica1 i {
+    font-size: 30px;
+    transition: 0.6s all;
+  }
+  .musica1 i:hover{
+    scale: 0.6;
+    transition: 1.6s all;
+  }
+
   
-  .musica2 h2 {
-    margin-top: 18px;
-    margin-left: 50px;
-    white-space: nowrap;
-  }
-  
-  .musica2 h2 p {
-    margin-left: 0px;
-    font-size: 15px;
-  }
-  
-  .musica2 a {
-    height: 0px;
-    width: 0px;
-    position: relative;
-    left: 0px;
-  }
-  
-  .musica2 a img {
-    height: 40px;
-    width: 40px;
-    margin-left: 1012px;
-    margin-top: 25px;
-  }
-  
-  .musica3 {
-    display: flex;
-    background-color: #7200a8;
-    border-radius: 5px;
-    width: 150vh;
-    height: 10vh;
-    margin: 50px;
-  }
-  
-  .musica3 h1 {
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-  }
-  
-  .musica3 h2 {
-    margin-top: 18px;
-    margin-left: 50px;
-    white-space: nowrap;
-  }
-  
-  .musica3 h2 p {
-    margin-left: 0px;
-    font-size: 15px;
-  }
-  
-  .musica3 a {
-    height: 0px;
-    width: 0px;
-    position: relative;
-    left: 0px;
-  }
-  
-  .musica3 a img {
-    height: 40px;
-    width: 40px;
-    margin-left: 1033px;
-    margin-top: 25px;
-  }
+
+ 
   
   .ver-mais {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #7200a8;
+    justify-content: END;
     border-radius: 5px;
-    width: 10vh;
+    width: 95%;
     height: 5vh;
-    margin: 50px;
-    margin-top: 65px;
-    margin-left: 690px;
+
     transition: transform 0.3s ease;
   }
   
   .ver-mais a {
+    background-color: var(--roxo_padrao);
     color: #fff;
     text-decoration: none;
+    width: 120px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    transition: 0.6s all;
+    border-radius: 10px;
   }
   
-  .ver-mais:hover {
-    transform: scale(1.1);
+  .ver-mais a:hover {
+    scale: 1.06;
+    transition: 0.6s all;
+    background-color: white;
+    color: var(--roxo_padrao);
   }
+  
   

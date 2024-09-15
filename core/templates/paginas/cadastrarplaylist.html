@@ -5,8 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adicionar Playlist</title>
     <link rel="stylesheet" href="{%static 'css/cadplaylist.css'%}">
+    <link rel="shortcut icon" href="{% static 'media/icons/logo.png' %}" type="image/x-icon">
 
 </head>
 <body>
@@ -14,7 +15,7 @@
 
         <main class="form">
 
-            <h2>Adicionar Playlist </h2>
+            <h2>Adicionar Trilha </h2>
             <form action="{% url 'createplaylist' %}" method="post">
                 {% csrf_token %}
                 {% for field in form %}

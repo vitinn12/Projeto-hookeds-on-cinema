@@ -44,10 +44,12 @@ def login_user(request):
 
 
 def index (request):
-    return render (request, 'paginas/index.html')
+    Playlist = Playlists.objects.all()
+    return render (request, 'paginas/index.html', {'Playlist':Playlist})
 
-def areadatriha(request):
-    return render (request, 'paginas/areadatrilha.html')
+def areadatriha(request, id):
+    playlist = Playlists.objects.get(id=id) 
+    return render (request, 'paginas/areadatrilha.html', {'playlist': playlist})
 
 
 def perfil_usuario(request):
@@ -61,7 +63,7 @@ def redefinir_senha(request):
 
 def home(request):
     Playlist = Playlists.objects.all()
-    return render(request, 'paginas/home.html', {'Playlist': Playlist})
+    return render(request, 'paginas/home.html', {'Playlist':Playlist})
 
 def adicionarplaylist(request):
     form = PlaylistForm()
@@ -72,10 +74,17 @@ def editarplaylist(request, id):
     return render(request, 'paginas/editar.html', {'playlist': playlist})
 
 def updateplaylist (request, id):
-    vnome = request.POST.get("album_musica")
+    vnomealbum = request.POST.get("album_musica")
+    vnomemusica = request.POST.get ("nome_musica")
+    vlink = request.POST.get ("link")
+
     playlist = Playlists.objects.get(id=id)
-    playlist.album_musica = vnome
+
+    playlist.album_musica = vnomealbum
+    playlist.nome_musica = vnomemusica
+    playlist.link = vlink
     playlist.save()
+
     return redirect(home)
 
 def deleteplaylist(request,id):

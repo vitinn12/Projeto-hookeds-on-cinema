@@ -7,7 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/e9bb3fc60a.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="{% static 'css/home.css' %}">n
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
   <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="shortcut icon" href="{% static 'media/icons/logo.png' %}" type="image/x-icon">
@@ -62,7 +62,8 @@
       </div>
       <div class="perfil">
         <a href="{% url 'perfil_usuario' %}" class="btn-perfil">Perfil</a>
-        <a href="{% url 'adicionarplaylist' %}" class="btn-adicionar">Adicionar Playlist</a>   <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
+        <a href="{% url 'adicionarplaylist' %}" class="btn-adicionar">Adicionar Trilha</a>
+        <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
       </div>
     </div>
 
@@ -88,45 +89,41 @@
       </main>
 
     </section>
-    
+
     <section class="adicionados">
-      <article>
-        <h1>Playlists</h1>
+      <article class="article-home">
+        <h1>Adicionados Recentemente</h1>
         <div class="adicionados-cards">
 
-          <main>
+          {% for playlist in Playlist %}
+            <main>
+              <div class="imagem-adicionados">
+                {% if playlist.imagem %}
+                <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
+                {% endif %}
+              </div>
 
-            {% for playlist in Playlist %}
-
-            <li>{{playlist.nome_musica}} - {{playlist.album_musica}} -
-              <span>              
-                <a href="{% url 'editarplaylist' id=playlist.id %}">Editar</a>
-                <a href="{% url 'deletarplaylist' id=playlist.id %}">Deletar</a>  
-                  
+              <span class="texto">
+                <h3>{{ playlist.nome_musica }}</h3>
+                <h5>{{ playlist.ano }}</h5>
               </span>
 
+              <span class="btn-editar">
+                <a href="{% url 'editarplaylist' id=playlist.id %}">Editar</a>
+                <a href="{% url 'deletarplaylist' id=playlist.id %}">Deletar</a>
+              </span>
+            </main>
+          {% endfor %}
 
-               </li>
-                
-            {% endfor %}
-
-          </main>
 
           <a href="{% url 'adicionarplaylist' %}" class="adicionar-playlist">
             <i class="fa-solid fa-plus"></i>
             <span>
               Adicionar <br>
-              playlist
+              Trilha
             </span>
 
           </a>
-
-
-
-
-
-
-
 
         </div>
 
@@ -151,40 +148,40 @@
       <article>
         <h1>Relacionados</h1>
         <div class="adicionados-cards">
-         
+
           <div class="card">
             <div class="imagem-adicionados">
               <img src="{% static 'media/galeria/the simpsons.png'  %}" alt="">
 
-            
-            <span class="texto">
-              <h3>The Simpsons</h3>
-              <h5>1989</h5>
-            </span>
-          </div>
+
+              <span class="texto">
+                <h3>The Simpsons</h3>
+                <h5>1989</h5>
+              </span>
+            </div>
             <a href="">Acessar</a>
           </div>
           <div class="card">
             <div class="imagem-adicionados">
               <img src="{% static 'media/galeria/taxi driver.png'  %}" alt="">
 
-            <span class="texto">
-              <h3>Taxi Driver</h3>
-              <h5>1976</h5>
-            </span>
-          </div>
+              <span class="texto">
+                <h3>Taxi Driver</h3>
+                <h5>1976</h5>
+              </span>
+            </div>
             <a href="">Acessar</a>
           </div>
           <div class="card">
             <div class="imagem-adicionados">
               <img src="{% static 'media/galeria/psicopata americano.png'  %}" alt="">
 
-            
-            <span class="texto">
-              <h3>Psicopata Americano</h3>
-              <h5>2000</h5>
-            </span>
-          </div>
+
+              <span class="texto">
+                <h3>Psicopata Americano</h3>
+                <h5>2000</h5>
+              </span>
+            </div>
             <a href="">Acessar</a>
           </div>
 
@@ -192,26 +189,26 @@
             <div class="imagem-adicionados">
               <img src="{% static 'media/galeria/marley & eu.png'  %}" alt="">
 
-            
-            <span class="texto">
-              <h3>Marley e Eu</h3>
-              <h5>2008</h5>
-            </span>
-          </div>
+
+              <span class="texto">
+                <h3>Marley e Eu</h3>
+                <h5>2008</h5>
+              </span>
+            </div>
             <a href="">Acessar</a>
           </div>
 
-          
+
           <div class="card">
             <div class="imagem-adicionados">
               <img src="{% static 'media/galeria/game of thrones.png'  %}" alt="">
 
-            
-            <span class="texto">
-              <h3>Game Of Trhones</h3>
-              <h5>2011</h5>
-            </span>
-          </div>
+
+              <span class="texto">
+                <h3>Game Of Trhones</h3>
+                <h5>2011</h5>
+              </span>
+            </div>
             <a href="">Acessar</a>
           </div>
 
@@ -219,12 +216,12 @@
             <div class="imagem-adicionados">
               <img src="{% static 'media/galeria/Baby Driver.jpg'  %}" alt="">
 
-            
-            <span class="texto">
-              <h3>Baby Driver</h3>
-              <h5>2017</h5>
-            </span>
-          </div>
+
+              <span class="texto">
+                <h3>Baby Driver</h3>
+                <h5>2017</h5>
+              </span>
+            </div>
             <a href="">Acessar</a>
           </div>
 

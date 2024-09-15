@@ -12,7 +12,6 @@ class PlaylistForm (forms.ModelForm):
             'nome_artista' : 'Nome do Artista',
             'album_musica' : 'Nome do Album',
             'link' : 'Link'
-
         }
 
 

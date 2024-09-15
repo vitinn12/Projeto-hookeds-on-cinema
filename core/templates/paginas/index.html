@@ -89,85 +89,28 @@
     </section>
 
     <section class="adicionados">
-      <article>
+      <article class="article-home">
         <h1>Adicionados recentemente</h1>
         <div class="adicionados-cards">
-          <div class="card">
-            <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/the 100.png'  %}" alt="">
-
-            
-            <span class="texto">
-              <h3>The 100</h3>
-              <h5>2014</h5>
-            </span>
-          </div>
-            <a href="">Acessar</a>
-          </div>
-          <div class="card">
-            <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/titanic.jpg'  %}" alt="">
-
-            <span class="texto">
-              <h3>Titanic</h3>
-              <h5>1998</h5>
-            </span>
-          </div>
-            <a href="">Acessar</a>
-          </div>
-          <div class="card">
-            <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/o Iluminado.png'  %}" alt="">
-
-            
-            <span class="texto">
-              <h3>O Iluminado</h3>
-              <h5>1980</h5>
-            </span>
-          </div>
-            <a href="">Acessar</a>
-          </div>
-
-          <div class="card">
-            <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/carros.png'  %}" alt="">
-
-            
-            <span class="texto">
-              <h3>Carros</h3>
-              <h5>2006</h5>
-            </span>
-          </div>
-            <a href="">Acessar</a>
-          </div>
-
-          <div class="card">
-            <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/game of thrones.png'  %}" alt="">
-
-            
-            <span class="texto">
-              <h3>Game Of Trhones</h3>
-              <h5>2011</h5>
-            </span>
-          </div>
-            <a href="">Acessar</a>
-          </div>
-
-          <div class="card">
-            <div class="imagem-adicionados">
-              <img src="{% static 'media/galeria/Baby Driver.jpg'  %}" alt="">
-
-            
-            <span class="texto">
-              <h3>Baby Driver</h3>
-              <h5>2017</h5>
-            </span>
-          </div>
-            <a href="">Acessar</a>
-          </div>
           
+          {% for playlist in Playlist %}
+          <main>
+            <div class="imagem-adicionados">
+              {% if playlist.imagem %}
+              <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
+              {% endif %}
+            </div>
 
+            <span class="texto">
+              <h3>{{ playlist.nome_musica }}</h3>
+              <h5>{{ playlist.ano }}</h5>
+            </span>
+
+            <span class="btn-editar">
+              <a href="{% url 'areadatrilha' playlist.id %}">Acessar</a>
+            </span>
+          </main>
+        {% endfor %}
 
         </div> <!-- ==================== FIM DOS ADICIONANDOS ======================-->
 

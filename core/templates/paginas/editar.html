@@ -16,11 +16,15 @@
         <main class="form">
 
             <h2>Editar Playlist </h2>
-            <span><strong>Nome Atual: </strong> {{playlist.album_musica}}</span>
+            <span><strong>Nome da musica atual: </strong> {{playlist.nome_musica}}</span>
+            <span><strong>Nome do album atual: </strong> {{playlist.album_musica}}</span>
+            <span><strong>Link Atual: </strong> {{playlist.link}}</span>
             <form action="{% url 'updateplaylist' id=playlist.id %}" method="post">
                 {% csrf_token %}
                 
-                <input type="text" name="album_musica" id="{{playlist.album_musica}}">
+                <input type="text" placeholder="Nomo nome da Musica" name="nome_musica" id="{{playlist.nome_musica}}">
+                <input type="text" placeholder="Nomo nome do Album" name="album_musica" id="{{playlist.album_musica}}">
+                <input type="text" placeholder="Nomo Link" name="link" id="{{playlist.link}}">
                 <button type="submit"> Salvar </button>
 
             </form>

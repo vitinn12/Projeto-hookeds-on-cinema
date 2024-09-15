@@ -1,75 +1,124 @@
 :root {
-    --preto: #020202;
-    --roxo_padrao: #7200A8;
-    --roxo_claro: #4C006F;
-    --amarelo: #FFC107;
-    --cinza: #0F0F0F;
-  }
-  .btn-perfil{
-    background-color: #4C006F;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height:45px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.6s all;
-  }
- .btn-adicionar{
-    background-color: #4C006F;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 100px;
-    height:45px;
-    border-radius: 10px;
-    transition: 0.6s all;
-    font-weight: bold;
+  --preto: #020202;
+  --roxo_padrao: #7200a8;
+  --roxo_claro: #4c006f;
+  --amarelo: #ffc107;
+  --cinza: #0f0f0f;
 }
-.btn-adicionar:hover, .btn-perfil:hover {
-    transition: 0.6s all;
-    scale: 1.07;
+.btn-perfil {
+  background-color: #4c006f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 45px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.6s all;
+}
+.btn-adicionar {
+  background-color: #4c006f;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  height: 45px;
+  border-radius: 10px;
+  transition: 0.6s all;
+  font-weight: bold;
+}
+.btn-adicionar:hover,
+.btn-perfil:hover {
+  transition: 0.6s all;
+  scale: 1.07;
 }
 
-.adicionados-cards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-.adicionados-cards main{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    
+
+.adicionados-cards main {
+  display: flex;
+  gap: 20px;
 
 }
 .adicionados-cards main li {
-    display: flex;
-    color: white;
-    list-style: none;
-    width: 200px;
-    height: 100px;
-    background-color: var(--cinza);
-    padding: 10px;
-    align-items: center;
-
+  display: flex;
+  color: white;
+  list-style: none;
+  width: 200px;
+  height: 100px;
+  background-color: var(--cinza);
+  padding: 10px;
+  align-items: center;
 }
 
 .adicionar-playlist {
-    width: 100px;
-    height: 100px;
-    background-color:var(--cinza) ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
+  width: 100px;
+  height: 100px;
+  background-color: var(--cinza);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: 0.6s all;
+  border-radius: 10px;
+}
+.adicionar-playlist:hover {
+  scale: 1.06;
+  transition: 0.6s all;
 }
 .perfil a {
-    background-color: #4C006F;
+  background-color: #4c006f;
 }
 .adicionar-playlist span {
-    text-align:center;
+  text-align: center;
+}
+.btn-editar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn-editar a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--roxo_padrao);
+  width: 80px;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: 0.7s all;
+  font-weight: bolder;
+}
+.btn-editar a:hover {
+  transition: 0.7s all;
+  color: var(--roxo_padrao);
+  background-color: white;
+  scale: 1.06;
+}
+.adicionados-cards {
+  align-items: start;
+  justify-content: center;
+  height: 200px;
+}
+.adicionados-cards main {
+  width: 400px;
+  height: 150px;
+  padding: 10px;
+  background-color: var(--cinza);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.adicionados .article-home {
+
+  justify-content: start;
+  align-items: start;
+  height: 300px;
+  gap: 0;
 }

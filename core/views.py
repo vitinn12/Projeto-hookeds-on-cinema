@@ -94,9 +94,12 @@ def deleteplaylist(request,id):
 
 @login_required(login_url='/login/')
 def view_create_playlist(request):
-    form = PlaylistForm(request.POST)
-    if form.is_valid():
-        form.save()
-        return redirect('home')  
+    if request.method == 'POST':
+        form = PlaylistForm(request.POST, request.FILES) 
+        if form.is_valid():
+            form.save()
+            return redirect('home')  
     else:
-        return render(request, 'paginas/cadastrarplaylist.html', {'form': form})
+        form = PlaylistForm()  # Exibe o formulário vazio para GET requests
+    
+    return render(request, 'paginas/cadastrarplaylist.html', {'form': form})

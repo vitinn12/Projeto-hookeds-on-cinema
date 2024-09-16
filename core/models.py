@@ -15,13 +15,13 @@ class Playlists(models.Model):
     nome_artista = models.CharField(max_length=30)
     album_musica = models.CharField(max_length=20)
     ano = models.CharField(max_length=4)
-    descricao = models.TextField(blank=True, null=True) 
-    imagem = models.ImageField(upload_to='static/media/', default='carros.png', blank=True)
+    descricao = models.TextField(blank=True, null=True)
+    imagem = models.ImageField(upload_to='images/', default='carros.png', blank=True)
     link = models.CharField(max_length=60)
     
     def __str__(self):
-      return self.nome_musica
-    
+        return self.nome_musica
+
 
 class Midia(models.Model):
     tipo = models.CharField(max_length=45)

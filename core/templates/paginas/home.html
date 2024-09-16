@@ -95,7 +95,7 @@
       <article class="article-home">
         <h1>Adicionados Recentemente</h1>
         <div class="adicionados-cards">
-          {% for playlist in Playlist %}
+          {% for playlist in playlists %}
             <main>
               {% if playlist.imagem %}
               <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />

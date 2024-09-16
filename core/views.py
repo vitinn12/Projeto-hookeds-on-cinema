@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.decorators import login_required
@@ -16,14 +16,12 @@ def register(request):
         usuario = request.POST.get('usuario')
         senha = request.POST.get('senha')
 
-        # Verificar se o usuário já existe
         if User.objects.filter(username=usuario).exists():
             return HttpResponse('Já existe um usuário com esse username')
 
-        # Criar o novo usuário
         try:
             User.objects.create_user(username=usuario, password=senha)
-            return HttpResponse('Usuário cadastrado com sucesso')
+            return redirect('login')  # Redireciona para a página de login
         except Exception as e:
             return HttpResponse(f'Erro ao cadastrar usuário: {e}')
         
@@ -37,8 +35,8 @@ def login_user(request):
         user = authenticate(username=usuario, password=senha)
 
         if user is not None:
-            auth_login(request, user)  # Inicia a sessão do usuário
-            return redirect (home)  # Redireciona para uma URL após login bem-sucedido
+            auth_login(request, user)
+            return redirect('home')  # Nome da URL da view home
         else:
             return HttpResponse('Usuário ou senha inválidos')
 
@@ -51,51 +49,54 @@ def areadatriha(request, id):
     playlist = Playlists.objects.get(id=id) 
     return render (request, 'paginas/areadatrilha.html', {'playlist': playlist})
 
-
+@login_required(login_url='/login/')
 def perfil_usuario(request):
     return render(request, 'paginas/perfil_usuario.html')
 
 @login_required(login_url='/login/')
-
 def redefinir_senha(request):
     return render (request, 'paginas/redefinir_senha.html')
 
-
+@login_required(login_url='/login/')
 def home(request):
-    Playlist = Playlists.objects.all()
-    return render(request, 'paginas/home.html', {'Playlist':Playlist})
+    playlists = Playlists.objects.all() 
+    return render(request, 'paginas/home.html', {'playlists': playlists})
 
+@login_required(login_url='/login/')
 def adicionarplaylist(request):
     form = PlaylistForm()
     return render (request ,'paginas/cadastrarplaylist.html', {'form': form})
 
+@login_required(login_url='/login/')
 def editarplaylist(request, id):
     playlist = Playlists.objects.get(id=id) 
     return render(request, 'paginas/editar.html', {'playlist': playlist})
 
-def updateplaylist (request, id):
-    vnomealbum = request.POST.get("album_musica")
-    vnomemusica = request.POST.get ("nome_musica")
-    vlink = request.POST.get ("link")
+@login_required(login_url='/login/')
+def updateplaylist(request, id):
+    playlist = get_object_or_404(Playlists, id=id)
 
-    playlist = Playlists.objects.get(id=id)
+    if request.method == 'POST':
+        form = PlaylistForm(request.POST, request.FILES, instance=playlist)
+        if form.is_valid():
+            form.save()
+            return redirect('home')  
+    else:
+        form = PlaylistForm(instance=playlist)
 
-    playlist.album_musica = vnomealbum
-    playlist.nome_musica = vnomemusica
-    playlist.link = vlink
-    playlist.save()
+    return render(request, 'paginas/editar.html', {'form': form, 'playlist': playlist})
 
-    return redirect(home)
-
+@login_required(login_url='/login/')
 def deleteplaylist(request,id):
     playlist = Playlists.objects.get(id=id) 
     playlist.delete()
     return redirect(home)
 
-
+@login_required(login_url='/login/')
 def view_create_playlist(request):
-    form = PlaylistForm (request.POST)
+    form = PlaylistForm(request.POST)
     if form.is_valid():
         form.save()
-        return render (request, 'paginas/playlistsalvo.html')
-    
+        return redirect('home')  
+    else:
+        return render(request, 'paginas/cadastrarplaylist.html', {'form': form})

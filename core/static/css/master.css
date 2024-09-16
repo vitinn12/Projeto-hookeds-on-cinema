@@ -146,6 +146,9 @@ header {
     place-items: center;
     transition: 0.6s all;
   }
+  .perfil .btn-sair {
+    background-color: red;
+  }
   .perfil a:hover{
     scale: 1.06;
     transition: 0.6s all;

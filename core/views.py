@@ -51,7 +51,7 @@ def areadatriha(request, id):
 
 @login_required(login_url='/login/')
 def perfil_usuario(request):
-    return render(request, 'paginas/perfil_usuario.html')
+    return render(request, 'paginas/perfil_usuario.html', {'user': request.user})
 
 @login_required(login_url='/login/')
 def redefinir_senha(request):

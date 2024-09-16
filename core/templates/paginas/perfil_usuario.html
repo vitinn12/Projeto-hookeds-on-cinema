@@ -2,76 +2,53 @@
 
 {% load static %}
 
-
-
 {% block content %}
 
- <link rel="stylesheet" href="{%static 'css/perfil_usuario.css'%}">
+<link rel="stylesheet" href="{% static 'css/perfil_usuario.css' %}">
 
+<!--============= CONTAINER ===========-->
+<div class="container">
+    <main class="primeira_aba">
+        <a href="{% url 'areadousuario' %}" class="aba-dados-pessoais">
+            <i class="fa-solid fa-user"></i>
+            <h1>Dados Pessoais</h1>
+        </a>
+        <a href="{% url 'redefinir_senha' %}" class="aba-seguranca">
+            <i class="fa-solid fa-lock"></i>
+            <h1>Segurança</h1>
+        </a>
+        <a href="#" class="aba-sair">
+            <i class="fa-solid fa-door-open"></i>
+            <h1>Sair</h1>
+        </a>
+    </main>
 
-    <!--============= CONTAINER ===========-->
-    <div class="container">
-        <main class="primeira_aba">
-            <a href="{% url 'areadousuario' %}" class="aba-dados-pessoais">
-                <i class="fa-solid fa-user"></i>
-                <h1>Dados Pessoais</h1>
-            </a>
-            <a href="{% url 'redefinir_senha' %}" class="aba-seguranca">
-                <i class="fa-solid fa-lock"></i>
-                <h1>Segurança</h1>
-            </a>
-            <a href="#" class="aba-sair">
-                <i class="fa-solid fa-door-open"></i>
-                <h1>Sair</h1>
-            </a>
-
-        </main>
-
-        <main class="segunda_aba">
-            <h2>Meus Dados</h2>
-            <div class="dados">
-                <div class="meus_dados">
-                    <a>
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" placeholder="Seu Nome">
-
-                    </a>
-                    <a>
-                        <label for="date">Data de nascimento</label>
-                        <input type="text" id="data" placeholder="AA-ZZ-WWWW">
-                    </a>
-                    <a>
-                        <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Seu Email">
-                    </a>
-                    <a>
-                        <label for="telefone">Senha</label>
-                        <input type="text" id="Telefone" placeholder="Seu Numero">
-                    </a>
-
-                </div>
-
-                <div class="linha_vertical"></div>
-
-    <div class="meu_perfil">
-        <div class="upload">
-            <button class="upload-btn">
-                <p>Selecionar o arquivo</p> 
-                <input type="file" id="upfile" onchange="readURL(this);">
-            </button>
-            
-            <img src="{% static 'media/icons/icon user black.png'%}" class="upload_img" id="file_upload">
-        </div>
-        <button class="enviar">Enviar</button>
-    </div>
+    <main class="segunda_aba">
+        <h2>Meus Dados</h2>
+        <div class="dados">
+            <div class="meus_dados">
+                <a>
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" value="{{ user.username }}" readonly>
+                </a>
+               
             </div>
 
-        </main>
-    </div>
+            <div class="linha_vertical"></div>
 
-
+            <div class="meu_perfil">
+                <div class="upload">
+                    <button class="upload-btn">
+                        <p>Selecionar o arquivo</p> 
+                        <input type="file" id="upfile" onchange="readURL(this);">
+                    </button>
+                    
+                    <img src="{% static 'media/icons/icon user black.png' %}" class="upload_img" id="file_upload">
+                </div>
+                <button class="enviar">Enviar</button>
+            </div>
+        </div>
+    </main>
+</div>
 
 {% endblock %}
-
-   
-    

@@ -62,10 +62,15 @@
       </div>
       <div class="perfil">
         <a href="{% url 'perfil_usuario' %}" class="btn-perfil">Perfil</a>
+        {% if user.is_authenticated and user.is_superuser %}
         <a href="{% url 'adicionarplaylist' %}" class="btn-adicionar">Adicionar Filme</a>
-        <a href="{% url 'areadousuario' %}" class="btn-sair">Sair</a>
-        <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
-      </div>
+        {% endif %}
+        
+        <form method="POST" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button type="submit" class="btn-sair">Sair</button>
+        </form>
+    </div>
     </div>
 
   </header>
@@ -107,15 +112,20 @@
                 <h3>{{ playlist.nome_filme}}</h3>
                 <h5>{{ playlist.ano }}</h5>
               </span>
-
+                {% if user.is_authenticated and user.is_superuser %}
               <span class="btn-editar">
                 <a href="{% url 'editarplaylist' id=playlist.id %}">Editar</a>
                 <a href="{% url 'deletarplaylist' id=playlist.id %}">Deletar</a>
               </span>
+                {%else%}
+                <span class="btn-editar">
+                  <a href="{% url 'areadatrilha' playlist.id %}">Acessar</a>
+                </span>
+              {% endif %}
             </main>
-          {% endfor %}
+              {% endfor %}
 
-
+             {% if user.is_authenticated and user.is_superuser %}
           <a href="{% url 'adicionarplaylist' %}" class="adicionar-playlist">
             <i class="fa-solid fa-plus"></i>
             <span>
@@ -124,7 +134,7 @@
             </span>
 
           </a>
-
+          {% endif %}
         </div>
 
         </div> <!-- ==================== FIM DOS ADICIONANDOS ======================-->

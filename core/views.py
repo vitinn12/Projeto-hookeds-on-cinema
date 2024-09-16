@@ -4,6 +4,9 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.decorators import login_required
 from .models import *
 from .forms import PlaylistForm
+from django.contrib.auth.decorators import user_passes_test
+
+
 
 
 def login (request):
@@ -92,14 +95,21 @@ def deleteplaylist(request,id):
     playlist.delete()
     return redirect(home)
 
+def is_superuser(user):
+    return user.is_superuser
+
+
 @login_required(login_url='/login/')
+@user_passes_test(is_superuser)
 def view_create_playlist(request):
     if request.method == 'POST':
-        form = PlaylistForm(request.POST, request.FILES) 
+        form = PlaylistForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')  
+            return redirect('home')
+        else:
+            print("Form errors:", form.errors)
     else:
-        form = PlaylistForm()  # Exibe o formulário vazio para GET requests
+        form = PlaylistForm()
     
     return render(request, 'paginas/cadastrarplaylist.html', {'form': form})

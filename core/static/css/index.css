@@ -170,7 +170,7 @@ header .menu a i {
   display: grid;
   place-items: center;
   width: 70px;
-  height: 30px;
+  height: 30px;   
   transition: 0.5s all;
 }
 

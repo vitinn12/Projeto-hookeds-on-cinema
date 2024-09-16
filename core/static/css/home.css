@@ -84,8 +84,7 @@ main img {
   text-decoration: none;
   transition: 0.6s all;
   border-radius: 10px;
-  position: relative;
-  top: 40px;
+
 }
 .adicionar-playlist:hover {
   scale: 1.06;

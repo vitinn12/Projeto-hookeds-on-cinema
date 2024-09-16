@@ -16,4 +16,3 @@ class PlaylistForm (forms.ModelForm):
             'link' : 'Link'
         }
 
-

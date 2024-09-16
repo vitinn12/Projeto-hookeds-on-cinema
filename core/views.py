@@ -23,7 +23,7 @@ def register(request):
         # Criar o novo usuário
         try:
             User.objects.create_user(username=usuario, password=senha)
-            return render(request, 'paginas/comfirmaregistro.html')
+            return render(request, 'paginas/confirmaregistro.html')
         except Exception as e:
             return HttpResponse(f'Erro ao cadastrar usuário: {e}')
         
@@ -77,12 +77,14 @@ def updateplaylist (request, id):
     vnomealbum = request.POST.get("album_musica")
     vnomemusica = request.POST.get ("nome_musica")
     vlink = request.POST.get ("link")
+    vnomefilme = request.Post.get ("nome_filme")
 
     playlist = Playlists.objects.get(id=id)
 
     playlist.album_musica = vnomealbum
     playlist.nome_musica = vnomemusica
     playlist.link = vlink
+    playlisr.nome_filme = vnomefilme
     playlist.save()
 
     return redirect(home)

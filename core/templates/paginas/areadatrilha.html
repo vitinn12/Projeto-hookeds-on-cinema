@@ -11,9 +11,11 @@
         <main>
             <div class="container">
                 <div class="titulo-descricao">
-                        <img src="{{playlist.image.url}}" alt="{{ playlist.nome_musica }}" />
-
-
+                    {% if playlist.imagem %}
+                    <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
+                    {% else %}
+                    <img src="{% static 'icon_user.png' %}" alt="Imagem padrão" />
+                {% endif %}
                     <h1>{{playlist.nome_filme}}
                         <p>
                             {{playlist.ano}}

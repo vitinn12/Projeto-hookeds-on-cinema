@@ -88,40 +88,37 @@
 
     </section>
 
-    {% for playlist in Playlist %}
+    {% if Playlist %}
     <section class="adicionados">
       <article class="article-home">
-        <h1>Adicionados recentemente</h1>
+        <h1>Adicionados recentemente</h1> <!-- Título exibido apenas se houver playlists -->
         <div class="adicionados-cards">
-          
-          
-          <main>
-            <div class="imagem-adicionados">
-              {% if playlist.imagem %}
-              <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
-              {% endif %}
-            </div>
-
-            <span class="texto">
-              <h3>{{ playlist.nome_filme }}</h3>
-              <h5>{{ playlist.ano }}</h5>
-            </span>
-
-            <span class="btn-editar">
-              <a href="{% url 'areadatrilha' playlist.id %}">Acessar</a>
-            </span>
-          </main>
-        
-
+          {% for playlist in Playlist %}
+            <main>
+              <div class="imagem-adicionados">
+                {% if playlist.imagem %}
+                  <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
+                {% endif %}
+              </div>
+  
+              <span class="texto">
+                <h3>{{ playlist.nome_filme }}</h3>
+                <h5>{{ playlist.ano }}</h5>
+              </span>
+  
+              <span class="btn-editar">
+                <a href="{% url 'areadatrilha' playlist.id %}">Acessar</a>
+              </span>
+            </main>
+          {% endfor %}
         </div> <!-- ==================== FIM DOS ADICIONANDOS ======================-->
-
-
+  
         <a href="">Ver mais</a>
-
       </article>
-
     </section>
-    {% endfor %}
+    
+  {% endif %}
+  
     
     <section class="carrossel"><!-- ===carrosel===-->
       <div class="gallery">

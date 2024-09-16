@@ -124,7 +124,6 @@ header {
   }
   
   .search-perfil a {
-    position: relative;
     right: 30px;
   }
   
@@ -140,8 +139,17 @@ header {
     background-color: var(--amarelo);
     color: white;
     text-decoration: none;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    transition: 0.6s all;
   }
-  
+  .perfil a:hover{
+    scale: 1.06;
+    transition: 0.6s all;
+  }
   .btn-logar {
     border-radius: 10px;
     display: grid;

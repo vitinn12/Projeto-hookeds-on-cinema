@@ -25,7 +25,10 @@ body {
     color: white;
     gap: 20px;
 }
+span {
+    color: #ffc107;
 
+}
 .form h2 {
     margin: 0;
     font-size: 24px;
@@ -52,8 +55,8 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #fff;
-    color: #333;
+    background-color: #ffc107;
+    color: #fff;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;

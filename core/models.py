@@ -16,7 +16,7 @@ class Playlists(models.Model):
     album_musica = models.CharField(max_length=20)
     ano = models.CharField(max_length=4)
     descricao = models.TextField(blank=True, null=True) 
-    imagem = models.ImageField(default='icon user.png', blank=True)  
+    imagem = models.ImageField(upload_to='static/media/', default='carros.png', blank=True)
     link = models.CharField(max_length=60)
     
     def __str__(self):

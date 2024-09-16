@@ -63,6 +63,7 @@
       <div class="perfil">
         <a href="{% url 'perfil_usuario' %}" class="btn-perfil">Perfil</a>
         <a href="{% url 'adicionarplaylist' %}" class="btn-adicionar">Adicionar Filme</a>
+        <a href="{% url 'areadousuario' %}" class="btn-sair">Sair</a>
         <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
       </div>
     </div>
@@ -100,10 +101,10 @@
               <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
               {% else %}
               <img src="{% static 'icon_user.png' %}" alt="Imagem padrão" />
-          {% endif %}
+               {% endif %}
 
               <span class="texto">
-                <h3>{{ playlist.nome_musica }}</h3>
+                <h3>{{ playlist.nome_filme}}</h3>
                 <h5>{{ playlist.ano }}</h5>
               </span>
 

@@ -32,12 +32,19 @@
   transition: 0.6s all;
   scale: 1.07;
 }
+.btn-sair {
+  background-color: red;
+}
 
 
 .adicionados-cards main {
   display: flex;
   gap: 20px;
 
+}
+main img {
+    width: 100px;
+    border-radius: 10px;
 }
 .adicionados-cards main li {
   display: flex;

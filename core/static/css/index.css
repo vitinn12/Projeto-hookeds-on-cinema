@@ -294,7 +294,7 @@ header .perfil .btn-registrar:hover,
   align-items: center;
   gap: 10px;
 }
-.adicionados-cards .card .imagem-adicionados img {
+ .imagem-adicionados img {
   width: 100px;
   border-radius: 10px;
 }

@@ -84,6 +84,19 @@ body {
     color: #7200A8;
 }
 
+.btn-indigo {
+    border: none;
+    width: 100%;
+    padding: 12px;
+    background-color: #FFC107;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
 .back-btn {
     width: 100%;
     padding: 12px;
@@ -96,7 +109,8 @@ body {
     margin-top: 10px;
 }
 
-.back-btn:hover {
+.back-btn:hover,
+.btn-indigo:hover {
     background-color: #ffffff;
     color: #7200A8;
 }

@@ -29,7 +29,7 @@
             </div>
             <button class="login-btn" type="submit">Login <i class="fas fa-sign-in-alt"></i></button>
             <a href="{% url 'paginaPrincipal' %}"><button class="back-btn" type="button">Voltar para o Início <i class="fas fa-home"></i></button></a>
-            <p>Não registrado? <a href="index2.html" class="register-link">Crie uma conta <i class="fas fa-user-plus"></i></a></p>
+            <p>Não registrado? <a href="{% url 'registro' %}" class="register-link">Crie uma conta <i class="fas fa-user-plus"></i></a></p>
         </form>
     </div>
 </div>

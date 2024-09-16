@@ -62,7 +62,7 @@
       </div>
       <div class="perfil">
         <a href="{% url 'perfil_usuario' %}" class="btn-perfil">Perfil</a>
-        <a href="{% url 'adicionarplaylist' %}" class="btn-adicionar">Adicionar Trilha</a>
+        <a href="{% url 'adicionarplaylist' %}" class="btn-adicionar">Adicionar Filme</a>
         <!--ADICIONEM A PAGINA DE TRILHA AQUI-->
       </div>
     </div>
@@ -94,14 +94,13 @@
       <article class="article-home">
         <h1>Adicionados Recentemente</h1>
         <div class="adicionados-cards">
-
           {% for playlist in Playlist %}
             <main>
-              <div class="imagem-adicionados">
-                {% if playlist.imagem %}
-                <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
-                {% endif %}
-              </div>
+              {% if playlist.imagem %}
+              <img src="{{ playlist.imagem.url }}" alt="{{ playlist.nome_musica }}" />
+              {% else %}
+              <img src="{% static 'icon_user.png' %}" alt="Imagem padrão" />
+          {% endif %}
 
               <span class="texto">
                 <h3>{{ playlist.nome_musica }}</h3>
@@ -120,7 +119,7 @@
             <i class="fa-solid fa-plus"></i>
             <span>
               Adicionar <br>
-              Trilha
+              Filme
             </span>
 
           </a>

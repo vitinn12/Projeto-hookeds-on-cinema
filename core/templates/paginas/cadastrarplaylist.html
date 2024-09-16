@@ -15,7 +15,7 @@
 
         <main class="form">
 
-            <h2>Adicionar Trilha </h2>
+            <h2>Adicionar Filme</h2>
             <form action="{% url 'createplaylist' %}" method="post">
                 {% csrf_token %}
                 {% for field in form %}

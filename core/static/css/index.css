@@ -133,15 +133,12 @@ header .menu a i {
   border: none;
   border-radius: 10px;
   background-color: #ffffff;
-  color: white;
+  color: black;
   outline: none;
   width: 200px;
   transition: width 0.4s ease;
 }
 
-.search-perfil input:focus {
-  width: 250px;
-}
 
 .search-perfil i.fa-search {
   color: #ffc107;

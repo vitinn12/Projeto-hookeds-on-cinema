@@ -21,7 +21,7 @@ def register(request):
 
         try:
             User.objects.create_user(username=usuario, password=senha)
-            return redirect('login')  # Redireciona para a página de login
+            return render(request, 'paginas/comfirmaregistro.html')
         except Exception as e:
             return HttpResponse(f'Erro ao cadastrar usuário: {e}')
         
@@ -38,7 +38,7 @@ def login_user(request):
             auth_login(request, user)
             return redirect('home')  # Nome da URL da view home
         else:
-            return HttpResponse('Usuário ou senha inválidos')
+            return render(request, 'paginas/usuarioinvalido.html')
 
 
 def index (request):

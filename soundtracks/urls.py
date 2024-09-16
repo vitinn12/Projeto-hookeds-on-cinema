@@ -20,5 +20,6 @@ urlpatterns = [
     path ('editar/<int:id>/', views.editarplaylist, name='editarplaylist'), 
     path ('update/<int:id>/', views.updateplaylist, name='updateplaylist'), 
     path ('delete/<int:id>/', views.deleteplaylist, name='deletarplaylist'), 
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
  

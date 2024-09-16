@@ -54,6 +54,7 @@
   align-items: start;
 }
 
+
 .adicionar-playlist {
   width: 100px;
   height: 100px;
@@ -66,6 +67,8 @@
   text-decoration: none;
   transition: 0.6s all;
   border-radius: 10px;
+  position: relative;
+  top: 40px;
 }
 .adicionar-playlist:hover {
   scale: 1.06;
@@ -76,6 +79,7 @@
 }
 .adicionar-playlist span {
   text-align: center;
+
 }
 .btn-editar {
   display: flex;
@@ -119,6 +123,8 @@
   align-items: center;
   justify-content: space-between;
   color: white;
+  position: relative;
+  top: 40px;
 }
 .adicionados .article-home {
 

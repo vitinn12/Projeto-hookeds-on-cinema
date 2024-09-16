@@ -11,6 +11,8 @@ class PlaylistForm (forms.ModelForm):
             'nome_musica' : 'Nome da Musica',
             'nome_artista' : 'Nome do Artista',
             'album_musica' : 'Nome do Album',
+            'ano' : 'Ano do FIlme',
+            'descricao' : 'Descrição do Filme',
             'link' : 'Link'
         }
 

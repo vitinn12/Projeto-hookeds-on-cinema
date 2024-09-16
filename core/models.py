@@ -10,12 +10,13 @@ class Usuario(models.Model):
       return self.nome 
 
 class Playlists(models.Model):
+    nome_filme = models.CharField(max_length=250)
     nome_musica = models.CharField(max_length=50)
     nome_artista = models.CharField(max_length=30)
     album_musica = models.CharField(max_length=20)
     ano = models.CharField(max_length=4)
     descricao = models.TextField(blank=True, null=True) 
-    imagem = models.ImageField(upload_to='imagens/', blank=True, null=True) 
+    imagem = models.ImageField(default='icon user.png', blank=True)  
     link = models.CharField(max_length=60)
     
     def __str__(self):

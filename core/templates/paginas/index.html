@@ -88,12 +88,13 @@
 
     </section>
 
+    {% for playlist in Playlist %}
     <section class="adicionados">
       <article class="article-home">
         <h1>Adicionados recentemente</h1>
         <div class="adicionados-cards">
           
-          {% for playlist in Playlist %}
+          
           <main>
             <div class="imagem-adicionados">
               {% if playlist.imagem %}
@@ -102,7 +103,7 @@
             </div>
 
             <span class="texto">
-              <h3>{{ playlist.nome_musica }}</h3>
+              <h3>{{ playlist.nome_filme }}</h3>
               <h5>{{ playlist.ano }}</h5>
             </span>
 
@@ -110,7 +111,7 @@
               <a href="{% url 'areadatrilha' playlist.id %}">Acessar</a>
             </span>
           </main>
-        {% endfor %}
+        
 
         </div> <!-- ==================== FIM DOS ADICIONANDOS ======================-->
 
@@ -120,7 +121,8 @@
       </article>
 
     </section>
-
+    {% endfor %}
+    
     <section class="carrossel"><!-- ===carrosel===-->
       <div class="gallery">
         <div style="--i: url({% static 'media/galeria/interestelar.jpg' %});"></div>

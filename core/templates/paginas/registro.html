@@ -30,13 +30,13 @@
                 </label>
             </div>
             
-            <a href="/login/index.html">
+            <a href="/login/index.html" class="btn-cadastrar">
                 <input type="submit" class="btn btn-indigo" value="Cadastrar">
             </a>
             <a href="{% url 'paginaPrincipal' %}">
                 <button class="back-btn">Voltar para o Início <i class="fas fa-home"></i></button>
             </a>
-            <p>Já tem uma conta? <a href="index.html" class="login-link">Login <i class="fas fa-sign-in-alt"></i></a></p>
+            <p>Já tem uma conta? <a href="{% url 'login' %}" class="login-link">Login <i class="fas fa-sign-in-alt"></i></a></p>
         </div>
     </form>
 </div>
